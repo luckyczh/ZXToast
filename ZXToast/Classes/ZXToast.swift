@@ -53,6 +53,9 @@ public struct ZXToast{
     
     
    private static func show(_ customerView:UIView?=nil,text:String,position:ZXToastContentView.ToastPosition,delayHide:TimeInterval){
+       guard (customerView != nil || !text.isEmpty) else {
+           return
+       }
         DispatchQueue.main.async {
             let config = ToasConfig(customerView: customerView, text: text, delay: delayHide, position: position)
             let vi = ZXToastContentView(config: config)
