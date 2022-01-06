@@ -23,7 +23,6 @@ TODO: Add long description of the pod here.
                        DESC
 
   s.homepage         = 'https://github.com/luckyczh/ZXToast'
-   s.screenshots     = 'https://github.com/luckyczh/ZXToast/blob/master/test.gif'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'luckyczh' => '766479200@qq.com' }
   s.source           = { :git => 'https://github.com/luckyczh/ZXToast.git', :tag => s.version.to_s }
