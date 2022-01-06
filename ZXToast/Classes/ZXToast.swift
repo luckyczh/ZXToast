@@ -17,9 +17,9 @@ public struct ZXToast{
         DispatchQueue.main.async {
             var activity : UIActivityIndicatorView!
             if #available(iOS 13.0, *) {
-                activity = UIActivityIndicatorView(activityIndicatorStyle: .large)
+                activity = UIActivityIndicatorView(style: .large)
             } else {
-                activity = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
+                activity = UIActivityIndicatorView(style: .whiteLarge)
             }
             activity.color = .white
             activity.startAnimating()

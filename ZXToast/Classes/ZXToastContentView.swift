@@ -214,7 +214,7 @@ public class ZXToastContentView: UIView {
         if let toast = ToastManager.share.toasts.first{
             window.addSubview(toast)
             let timer = Timer.init(timeInterval: config.delay, target: self, selector: #selector(hide(timer:)), userInfo: ["toast":toast], repeats: false)
-            RunLoop.current.add(timer, forMode: RunLoopMode.commonModes)
+            RunLoop.current.add(timer, forMode: .common)
             UIView.animate(withDuration: ToastManager.share.fadeTime) {
                 toast.alpha = 1
             }
@@ -228,7 +228,7 @@ public class ZXToastContentView: UIView {
         if let activity = ToastManager.share.activities.last{
             window.addSubview(activity)
             let timer = Timer.init(timeInterval: ToastManager.share.activityTime, target: self, selector: #selector(showCloseBtn(timer:)), userInfo: nil, repeats: false)
-            RunLoop.current.add(timer, forMode: RunLoopMode.commonModes)
+            RunLoop.current.add(timer, forMode: .common)
             UIView.animate(withDuration: ToastManager.share.fadeTime) {
                 activity.alpha = 1
             }

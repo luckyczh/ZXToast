@@ -1,7 +1,8 @@
 {
   "name": "ZXToast",
   "version": "0.1.0",
-  "summary": "A short description of ZXToast.",
+  "summary": "提供toast",
+  "swift_versions": "5.5.2",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/luckyczh/ZXToast",
   "license": {
@@ -23,5 +24,6 @@
     "ZXToast": [
       "ZXToast/Assets/*.png"
     ]
-  }
+  },
+  "swift_version": "5.5.2"
 }
