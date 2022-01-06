@@ -52,7 +52,7 @@ extension ViewController:UITableViewDataSource,UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.row{
         case 0:
-            ZXToast.showText("提示1")
+            ZXToast.showText("")
         case 1:
             ZXToast.showText("提示2")
             ZXToast.showText("提示3")
