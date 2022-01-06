@@ -1,0 +1,6 @@
+framework module Pods_ZXToast_Tests {
+  umbrella header "Pods-ZXToast_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

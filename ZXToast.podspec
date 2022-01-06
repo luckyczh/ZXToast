@@ -9,7 +9,8 @@
 Pod::Spec.new do |s|
   s.name             = 'ZXToast'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of ZXToast.'
+  s.summary          = '提供toast'
+  s.swift_version    = '5.5.2'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -32,9 +33,9 @@ TODO: Add long description of the pod here.
 
   s.source_files = 'ZXToast/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'ZXToast' => ['ZXToast/Assets/*.png']
-  # }
+   s.resource_bundles = {
+     'ZXToast' => ['ZXToast/Assets/*.png']
+   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
