@@ -66,12 +66,8 @@ public struct ZXToast{
    public static func hideActivity(){
         DispatchQueue.main.async {
              while !ToastManager.share.activities.isEmpty{
-                 UIView.animate(withDuration: ToastManager.share.fadeTime) {
-                     ToastManager.share.activities.last?.alpha = 0
-                 } completion: { _ in
-                     ToastManager.share.activities.last?.removeFromSuperview()
-                     ToastManager.share.activities.removeAll(where: {$0===ToastManager.share.activities.last!})
-                 }
+                 let lastToast = ToastManager.share.activities.removeLast()
+                     lastToast.removeFromSuperview()
              }
         }
     }

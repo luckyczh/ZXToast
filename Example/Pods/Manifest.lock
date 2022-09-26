@@ -4,7 +4,7 @@ PODS:
   - FBSnapshotTestCase/Core (2.1.4)
   - FBSnapshotTestCase/SwiftSupport (2.1.4):
     - FBSnapshotTestCase/Core
-  - ZXToast (0.1.0)
+  - ZXToast (0.1.1)
 
 DEPENDENCIES:
   - FBSnapshotTestCase (~> 2.1.4)
@@ -20,8 +20,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
-  ZXToast: 3aaf6b74b612447056e270d6f2302ebb83995a79
+  ZXToast: b605f801588fa0683d1f786aab93a62c3f1eaa6c
 
 PODFILE CHECKSUM: 4ff6c220e5bad608eb0b74ece38a9426fc5436ef
 
-COCOAPODS: 1.11.2
+COCOAPODS: 1.11.3

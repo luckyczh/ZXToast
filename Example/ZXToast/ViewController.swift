@@ -52,9 +52,9 @@ extension ViewController:UITableViewDataSource,UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.row{
         case 0:
-            ZXToast.showText("")
+            ZXToast.showText("提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1",position: .bottom)
         case 1:
-            ZXToast.showText("提示2")
+            ZXToast.showText("提示2提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1")
             ZXToast.showText("提示3")
             ZXToast.showText("提示4")
             ZXToast.showText("提示5")

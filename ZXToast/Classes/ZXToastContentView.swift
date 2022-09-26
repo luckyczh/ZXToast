@@ -47,6 +47,7 @@ public struct ToastManager{
     
     let ActivityMinWidth :CGFloat = 80
     let ActivityMinHeight :CGFloat = 80
+    /// activity 标记
     let activityTimeFlag :TimeInterval = -1
     var toasts = [ZXToastContentView]()
     var activities = [UIView]()
