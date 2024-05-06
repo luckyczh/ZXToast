@@ -63,7 +63,7 @@ extension ViewController:UITableViewDataSource,UITableViewDelegate{
         case 3:
             ZXToast.showError("失败")
         case 4:
-            ZXToast.showActivity("加载中...")
+            ZXToast.showActivity()
         default:
             break
         }

@@ -12,14 +12,13 @@
 		2975A09730FD83DC0897129A11EA6585 /* SwiftSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0D66CF296ABBC57EC4D0452397E235 /* SwiftSupport.swift */; };
 		2B88C28DD20CBFA7B3AEB21A365197FE /* FBSnapshotTestController.h in Headers */ = {isa = PBXBuildFile; fileRef = AE9FF9459FBCDC4AF88FB6B5A4CC1439 /* FBSnapshotTestController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2CB61F6FA511CAACB43A50DC3A82E0DD /* UIImage+Snapshot.m in Sources */ = {isa = PBXBuildFile; fileRef = D872A3EE224412D4057C234FBC629F9C /* UIImage+Snapshot.m */; };
-		2EBF127A9E2FBB87DBC1DF55C0ECA4FA /* success.png in Resources */ = {isa = PBXBuildFile; fileRef = 09F6D144DCA38BC502F1DB46760830D9 /* success.png */; };
 		2ECCAC52EF4C74E1032E0BC646BBE5B9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57221B54D014471C3D3E1925EFC917C8 /* Foundation.framework */; };
 		30D475DF57C0C682A723231E7BCA0D14 /* FBSnapshotTestCasePlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ABB3EB3CCC5BCA82F40FE8DC87BB778 /* FBSnapshotTestCasePlatform.m */; };
 		373413256658309F9053CE22BF62077E /* UIImage+Snapshot.h in Headers */ = {isa = PBXBuildFile; fileRef = 284833D18C244D2B42966B6EE425AA59 /* UIImage+Snapshot.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		49BD99E3913A079F1D6E7F361730965B /* Pods-ZXToast_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CAF08366AB3D72AB89FF9D8BA373D9F2 /* Pods-ZXToast_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5466B15C11B7DAAEF197338BF707A3D1 /* ZXToast-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A312DFA02143B2E68C872618486666B /* ZXToast-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5466B15C11B7DAAEF197338BF707A3D1 /* ZXToast-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AB795137A35361BE1A7ABDFB664F4E0 /* ZXToast-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5558B876B579BC1E79BD3D2B19148329 /* UIApplication+StrictKeyWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 99A67367E018411D614EC8536A8A1C5B /* UIApplication+StrictKeyWindow.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		56F8961D19228954BCEBB5AF1DC5C32B /* ZXToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E1A85F9BC4C62109BE4945F0C0EA8E /* ZXToast.swift */; };
+		56F8961D19228954BCEBB5AF1DC5C32B /* ZXToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCB6D3E3F5E1CE09C8607CDCC615B04 /* ZXToast.swift */; };
 		5BE525FF6FA14B999ED2CCC0AA4FA0CF /* FBSnapshotTestCase-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ADA6E655DC84D06359BD0ED5E36C783 /* FBSnapshotTestCase-dummy.m */; };
 		5E76413C222A83DDFAA56CEA92F39189 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57221B54D014471C3D3E1925EFC917C8 /* Foundation.framework */; };
 		640CCE9C3A28AA3CA15510899F9140EE /* FBSnapshotTestCasePlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = 88B1DEEBF6316A84D7413645212492FF /* FBSnapshotTestCasePlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -30,83 +29,87 @@
 		875A310EAF4D0C136C3FFFF5E0335BE4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DA24A38BA9EE106B59E3D4C8DD1CE0E /* UIKit.framework */; };
 		880D7AF17552180811ABCAD35A3549B1 /* Pods-ZXToast_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 13D8CF8E07BF78BAE5141C1C6C65C4A7 /* Pods-ZXToast_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8AE19756F0126FE92AF625E36F3D70FE /* UIImage+Compare.h in Headers */ = {isa = PBXBuildFile; fileRef = 656116C8FA5458F45D4707110C9530EC /* UIImage+Compare.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		98904F566FB28ED24EAE18AD466BBC64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D690DDA8F68AFFDDDF4B1E8BD5CA0C8 /* Assets.xcassets */; };
 		9D3C5E2F56838937146191468A893244 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E658F388F01C72599CA75537950B6095 /* XCTest.framework */; };
 		A3E691D3B953485EE71012DF8499057D /* ZXToast-ZXToast in Resources */ = {isa = PBXBuildFile; fileRef = 27FFFD85A6D0DE7E0204BA1D7571AE36 /* ZXToast-ZXToast */; };
-		A85233E5526EBB8BD72AC305BD72B175 /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = BFEE2BB6578D3472C3C850731C2273F5 /* close.png */; };
 		B4433B0E8C010BF460D72F251FCB7793 /* Pods-ZXToast_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 07342B4E54EDBC48D440FF2D7E063410 /* Pods-ZXToast_Tests-dummy.m */; };
 		B52281F9F4340D4FC8ABB2FEB1FEC08E /* UIImage+Compare.m in Sources */ = {isa = PBXBuildFile; fileRef = 235A78CFFA6D8B8D86CACD733531CB13 /* UIImage+Compare.m */; };
 		BADACD626D076747A9189AA48B159D57 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57221B54D014471C3D3E1925EFC917C8 /* Foundation.framework */; };
 		C390C6005353FB986CB52F474CEF8588 /* FBSnapshotTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E1B7EA746BF6557FD565BAE12AF9198 /* FBSnapshotTestController.m */; };
-		C80E876457A57BFEC48D7AE48F859665 /* ZXToastContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF929B4A8B2E03FA46F819060FD134A /* ZXToastContentView.swift */; };
+		C80E876457A57BFEC48D7AE48F859665 /* ZXToastContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A890BF243EE02F5C404FDFD1977B0C5F /* ZXToastContentView.swift */; };
 		C9F76407497DF0205D7460B36D22259F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3280BB5E7B57C31D41117A74F76E9DF3 /* QuartzCore.framework */; };
 		CA54C09A12400567AFFCB407EEB7E154 /* UIImage+Diff.m in Sources */ = {isa = PBXBuildFile; fileRef = 4568279DE47DC3AB91598E1317503995 /* UIImage+Diff.m */; };
-		D89A68013DB42EBD64530FFD4796B1D1 /* fail.png in Resources */ = {isa = PBXBuildFile; fileRef = F2E3DB2545CCBA87566C4E2903580706 /* fail.png */; };
-		E1A7456641911A08E434B7A4C6A3F694 /* ZXToast-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 525CF07BF8D163B3ADAF01D8D1057814 /* ZXToast-dummy.m */; };
+		D67F48B92BE8C83900192AF7 /* ToastManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67F48B82BE8C83900192AF7 /* ToastManager.swift */; };
+		E1A7456641911A08E434B7A4C6A3F694 /* ZXToast-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C1E9FD61DE319A94BA734FA0DD3BA44B /* ZXToast-dummy.m */; };
 		FF8307B7346F4D3BA13C11AECFE6EDD0 /* FBSnapshotTestCase.h in Headers */ = {isa = PBXBuildFile; fileRef = FEE661E58CA6655B39AA49AA4C021C33 /* FBSnapshotTestCase.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		636D12B8E8EE110390E4000722F4C9CA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 950C263285320F8C7447CFD351F8C92C;
-			remoteInfo = ZXToast;
-		};
-		6E500EA619CCD26FB874E68EB3747519 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4B664CB2609EEF1037F067C7F4181AE7;
-			remoteInfo = "ZXToast-ZXToast";
-		};
-		87A67AF515A706ABC5BF245774C08FB6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 98A98149697C80CEF8D5772791E92E66;
-			remoteInfo = FBSnapshotTestCase;
-		};
-		AAFAF7D530A46149F0A06B2A8423AD5A /* PBXContainerItemProxy */ = {
+		63ABDE4CAAC5FD9BA3D6DF4803B56EAA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 8942C03B696E0EF91756AFD7FAA9F0C1;
 			remoteInfo = "Pods-ZXToast_Example";
 		};
+		80D9CE15073F1167FD0F34BBB807AB16 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 950C263285320F8C7447CFD351F8C92C;
+			remoteInfo = ZXToast;
+		};
+		9597270325A91B0EA3AC6658E8E9B86C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4B664CB2609EEF1037F067C7F4181AE7;
+			remoteInfo = "ZXToast-ZXToast";
+		};
+		AF10B212D5C8C067DD5B5CB3A773E802 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 98A98149697C80CEF8D5772791E92E66;
+			remoteInfo = FBSnapshotTestCase;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		07342B4E54EDBC48D440FF2D7E063410 /* Pods-ZXToast_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ZXToast_Tests-dummy.m"; sourceTree = "<group>"; };
-		09F6D144DCA38BC502F1DB46760830D9 /* success.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = success.png; path = ZXToast/Assets/success.png; sourceTree = "<group>"; };
+		09DF0408F8E2E6AE89292E6907F5F33D /* ZXToast.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = ZXToast.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		0B8F8859BC4F02BA6B06D9F4C09F099F /* ResourceBundle-ZXToast-ZXToast-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-ZXToast-ZXToast-Info.plist"; sourceTree = "<group>"; };
+		0D769B275BEFF0EAC98CB0AADA784714 /* ZXToast-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ZXToast-Info.plist"; sourceTree = "<group>"; };
 		0F538C426803AE34255FC6E35B408CCA /* UIApplication+StrictKeyWindow.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIApplication+StrictKeyWindow.m"; path = "FBSnapshotTestCase/Categories/UIApplication+StrictKeyWindow.m"; sourceTree = "<group>"; };
 		13D8CF8E07BF78BAE5141C1C6C65C4A7 /* Pods-ZXToast_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ZXToast_Example-umbrella.h"; sourceTree = "<group>"; };
-		18B7708FEDD4ECF923E75ED77DAB0D12 /* ZXToast.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = ZXToast.podspec; sourceTree = "<group>"; tabWidth = 2; };
-		19B327E97974A74588ED709C1BB37578 /* ZXToast-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ZXToast-Info.plist"; sourceTree = "<group>"; };
+		17AFA35C81867D56B31AC0D05A64E7A7 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		1AB795137A35361BE1A7ABDFB664F4E0 /* ZXToast-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ZXToast-umbrella.h"; sourceTree = "<group>"; };
 		1ADA6E655DC84D06359BD0ED5E36C783 /* FBSnapshotTestCase-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FBSnapshotTestCase-dummy.m"; sourceTree = "<group>"; };
-		1D87B097406DBFAE8FCA7930F133AE6A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		1DA24A38BA9EE106B59E3D4C8DD1CE0E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		235A78CFFA6D8B8D86CACD733531CB13 /* UIImage+Compare.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Compare.m"; path = "FBSnapshotTestCase/Categories/UIImage+Compare.m"; sourceTree = "<group>"; };
-		2667BB0685AD4CD58DCD45457773AE7C /* Pods-ZXToast_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-ZXToast_Example"; path = Pods_ZXToast_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2667BB0685AD4CD58DCD45457773AE7C /* Pods_ZXToast_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZXToast_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		26B08660DCE1601313423A01863D1DDF /* Pods-ZXToast_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ZXToast_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		26FCE2B5CDDC91485EC1A13A7F7C92DE /* ZXToast.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ZXToast.modulemap; sourceTree = "<group>"; };
 		277B6BE10C665F515606A22FD60C6DCC /* FBSnapshotTestCase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestCase.m; path = FBSnapshotTestCase/FBSnapshotTestCase.m; sourceTree = "<group>"; };
 		27FFFD85A6D0DE7E0204BA1D7571AE36 /* ZXToast-ZXToast */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "ZXToast-ZXToast"; path = ZXToast.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		284833D18C244D2B42966B6EE425AA59 /* UIImage+Snapshot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Snapshot.h"; path = "FBSnapshotTestCase/Categories/UIImage+Snapshot.h"; sourceTree = "<group>"; };
 		2CB4F1EC35FE33D98E84F4ED84C0FC10 /* Pods-ZXToast_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ZXToast_Example-frameworks.sh"; sourceTree = "<group>"; };
+		2DB2B6AFDA458F1045F060020F9B2275 /* ZXToast.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ZXToast.release.xcconfig; sourceTree = "<group>"; };
 		3280BB5E7B57C31D41117A74F76E9DF3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		336F1405B3BC46E6E331A7CC5701A7CC /* ZXToast-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ZXToast-prefix.pch"; sourceTree = "<group>"; };
+		37398229E7CD8C106925BF21BDD8A56D /* ZXToast.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ZXToast.modulemap; sourceTree = "<group>"; };
 		3F0D66CF296ABBC57EC4D0452397E235 /* SwiftSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftSupport.swift; path = FBSnapshotTestCase/SwiftSupport.swift; sourceTree = "<group>"; };
 		453BD9EB6DC8669EE1FAD0D302EF7877 /* Pods-ZXToast_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ZXToast_Example.release.xcconfig"; sourceTree = "<group>"; };
 		4568279DE47DC3AB91598E1317503995 /* UIImage+Diff.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Diff.m"; path = "FBSnapshotTestCase/Categories/UIImage+Diff.m"; sourceTree = "<group>"; };
-		4A312DFA02143B2E68C872618486666B /* ZXToast-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ZXToast-umbrella.h"; sourceTree = "<group>"; };
 		4C6513B09838318BD763CFD5390D1DE0 /* FBSnapshotTestCase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBSnapshotTestCase.release.xcconfig; sourceTree = "<group>"; };
 		4D3C9DBC48D187350660124EF8C7117B /* Pods-ZXToast_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ZXToast_Example-dummy.m"; sourceTree = "<group>"; };
-		525CF07BF8D163B3ADAF01D8D1057814 /* ZXToast-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ZXToast-dummy.m"; sourceTree = "<group>"; };
 		57221B54D014471C3D3E1925EFC917C8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		5C4F31330DFA99D699E4BDC8C3573D73 /* FBSnapshotTestCase */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FBSnapshotTestCase; path = FBSnapshotTestCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C4F31330DFA99D699E4BDC8C3573D73 /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FBSnapshotTestCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CCB6D3E3F5E1CE09C8607CDCC615B04 /* ZXToast.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZXToast.swift; path = ZXToast/Classes/ZXToast.swift; sourceTree = "<group>"; };
+		5D690DDA8F68AFFDDDF4B1E8BD5CA0C8 /* Assets.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ZXToast/Assets/Assets.xcassets; sourceTree = "<group>"; };
 		60C374C0E0C3437566FB80CC4CD9FF96 /* Pods-ZXToast_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ZXToast_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		62E5A535FDDDDA7A559A52E0A948B09D /* Pods-ZXToast_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ZXToast_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		656116C8FA5458F45D4707110C9530EC /* UIImage+Compare.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Compare.h"; path = "FBSnapshotTestCase/Categories/UIImage+Compare.h"; sourceTree = "<group>"; };
+		66400B73EAC4470FF4A4D035917B73A9 /* ZXToast.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ZXToast.debug.xcconfig; sourceTree = "<group>"; };
 		668039F6C498688C56FAA79F5B29DA21 /* Pods-ZXToast_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ZXToast_Example.modulemap"; sourceTree = "<group>"; };
 		6ABB3EB3CCC5BCA82F40FE8DC87BB778 /* FBSnapshotTestCasePlatform.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestCasePlatform.m; path = FBSnapshotTestCase/FBSnapshotTestCasePlatform.m; sourceTree = "<group>"; };
 		7795F03EB754DB64BEF88C9AA564F0E8 /* Pods-ZXToast_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ZXToast_Example-Info.plist"; sourceTree = "<group>"; };
@@ -114,33 +117,28 @@
 		870187AA184630786E8C7B690CF5FD59 /* ZXToast */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ZXToast; path = ZXToast.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		88B1DEEBF6316A84D7413645212492FF /* FBSnapshotTestCasePlatform.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestCasePlatform.h; path = FBSnapshotTestCase/FBSnapshotTestCasePlatform.h; sourceTree = "<group>"; };
 		88F2615BD0317B25856A45CDD9F0B6D5 /* Pods-ZXToast_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ZXToast_Tests-Info.plist"; sourceTree = "<group>"; };
-		8DF929B4A8B2E03FA46F819060FD134A /* ZXToastContentView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZXToastContentView.swift; path = ZXToast/Classes/ZXToastContentView.swift; sourceTree = "<group>"; };
 		8E5923010B02074CAA9AAF6EA02D66AA /* FBSnapshotTestCase-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FBSnapshotTestCase-umbrella.h"; sourceTree = "<group>"; };
 		9432F2F83FA231A64DDDEE480983615F /* Pods-ZXToast_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ZXToast_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		9468E867498BBAF36F9AFFE4845F8B09 /* FBSnapshotTestCase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBSnapshotTestCase.debug.xcconfig; sourceTree = "<group>"; };
 		96187BF3038121CC146335E9FF0B0AFF /* UIImage+Diff.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Diff.h"; path = "FBSnapshotTestCase/Categories/UIImage+Diff.h"; sourceTree = "<group>"; };
 		99A67367E018411D614EC8536A8A1C5B /* UIApplication+StrictKeyWindow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIApplication+StrictKeyWindow.h"; path = "FBSnapshotTestCase/Categories/UIApplication+StrictKeyWindow.h"; sourceTree = "<group>"; };
-		9AF639BC63A304ADE7B86DE0863AA76F /* ZXToast.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ZXToast.debug.xcconfig; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A890BF243EE02F5C404FDFD1977B0C5F /* ZXToastContentView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZXToastContentView.swift; path = ZXToast/Classes/ZXToastContentView.swift; sourceTree = "<group>"; };
 		AE9FF9459FBCDC4AF88FB6B5A4CC1439 /* FBSnapshotTestController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestController.h; path = FBSnapshotTestCase/FBSnapshotTestController.h; sourceTree = "<group>"; };
-		B1E1A85F9BC4C62109BE4945F0C0EA8E /* ZXToast.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZXToast.swift; path = ZXToast/Classes/ZXToast.swift; sourceTree = "<group>"; };
-		B52DE76D5ED52A23935804B0E75EB1BB /* Pods-ZXToast_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-ZXToast_Tests"; path = Pods_ZXToast_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B52DE76D5ED52A23935804B0E75EB1BB /* Pods_ZXToast_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZXToast_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5FD51B83F14207BAC46A16DD8DB2A5F /* Pods-ZXToast_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ZXToast_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		B7103CA00AED20722C5B69CA5B4F6938 /* FBSnapshotTestCase-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "FBSnapshotTestCase-Info.plist"; sourceTree = "<group>"; };
-		BFEE2BB6578D3472C3C850731C2273F5 /* close.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = close.png; path = ZXToast/Assets/close.png; sourceTree = "<group>"; };
+		C1E9FD61DE319A94BA734FA0DD3BA44B /* ZXToast-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ZXToast-dummy.m"; sourceTree = "<group>"; };
 		CAF08366AB3D72AB89FF9D8BA373D9F2 /* Pods-ZXToast_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ZXToast_Tests-umbrella.h"; sourceTree = "<group>"; };
 		CBFF6C5FD9C3A84274A9314D3E940B6E /* FBSnapshotTestCase.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FBSnapshotTestCase.modulemap; sourceTree = "<group>"; };
 		D08CEBB9BDD9EF7A662ECFC0305C169E /* FBSnapshotTestCase-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FBSnapshotTestCase-prefix.pch"; sourceTree = "<group>"; };
-		D306943D8A578DFF3F59E352E0A16934 /* ZXToast.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ZXToast.release.xcconfig; sourceTree = "<group>"; };
+		D67F48B82BE8C83900192AF7 /* ToastManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ToastManager.swift; path = ZXToast/Classes/ToastManager.swift; sourceTree = "<group>"; };
 		D872A3EE224412D4057C234FBC629F9C /* UIImage+Snapshot.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Snapshot.m"; path = "FBSnapshotTestCase/Categories/UIImage+Snapshot.m"; sourceTree = "<group>"; };
 		DF814B6A92890A89E3D5D48623869183 /* Pods-ZXToast_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ZXToast_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		E658F388F01C72599CA75537950B6095 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		EAB56AC2CA653DCFA67944EB3BA12C5D /* ZXToast-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ZXToast-prefix.pch"; sourceTree = "<group>"; };
 		EE085EF100E661279FE389A7E621B310 /* Pods-ZXToast_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ZXToast_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		F2E3DB2545CCBA87566C4E2903580706 /* fail.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = fail.png; path = ZXToast/Assets/fail.png; sourceTree = "<group>"; };
 		F59890E043BA5182EA8C8B4EFE1109FA /* Pods-ZXToast_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ZXToast_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		F817ED3F2120AEC2E8EB4D9B434A56A8 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		F826F726A817402C2144D0DE1BAE446A /* ResourceBundle-ZXToast-ZXToast-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-ZXToast-ZXToast-Info.plist"; sourceTree = "<group>"; };
+		F6B83A6A20E2034FD092567E2A668AC0 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		F82FF28FD20C73044CA89764F89ED42F /* Pods-ZXToast_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ZXToast_Tests.modulemap"; sourceTree = "<group>"; };
 		FEE661E58CA6655B39AA49AA4C021C33 /* FBSnapshotTestCase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestCase.h; path = FBSnapshotTestCase/FBSnapshotTestCase.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -151,13 +149,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BADACD626D076747A9189AA48B159D57 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		84A3753BD2EB5176277660C6305A5C1E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,6 +168,13 @@
 				C9F76407497DF0205D7460B36D22259F /* QuartzCore.framework in Frameworks */,
 				875A310EAF4D0C136C3FFFF5E0335BE4 /* UIKit.framework in Frameworks */,
 				9D3C5E2F56838937146191468A893244 /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F47E6005FF9EBB3099DF088D054FF338 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,31 +206,42 @@
 			path = "Target Support Files/Pods-ZXToast_Tests";
 			sourceTree = "<group>";
 		};
+		18F1055E30E7B2BB02A08F96EF92D0A4 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				F6B83A6A20E2034FD092567E2A668AC0 /* LICENSE */,
+				17AFA35C81867D56B31AC0D05A64E7A7 /* README.md */,
+				09DF0408F8E2E6AE89292E6907F5F33D /* ZXToast.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
 		1B84287E05E73E0D1A0BB3D83D3B3B2B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5C4F31330DFA99D699E4BDC8C3573D73 /* FBSnapshotTestCase */,
-				2667BB0685AD4CD58DCD45457773AE7C /* Pods-ZXToast_Example */,
-				B52DE76D5ED52A23935804B0E75EB1BB /* Pods-ZXToast_Tests */,
+				5C4F31330DFA99D699E4BDC8C3573D73 /* FBSnapshotTestCase.framework */,
+				2667BB0685AD4CD58DCD45457773AE7C /* Pods_ZXToast_Example.framework */,
+				B52DE76D5ED52A23935804B0E75EB1BB /* Pods_ZXToast_Tests.framework */,
 				870187AA184630786E8C7B690CF5FD59 /* ZXToast */,
 				27FFFD85A6D0DE7E0204BA1D7571AE36 /* ZXToast-ZXToast */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1FB4048CE77E388B25E59C24C00BB50E /* ZXToast */ = {
+		2C1BD7E0DE744CF9BA2508EFEA0FF5CF /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				BFEE2BB6578D3472C3C850731C2273F5 /* close.png */,
-				F2E3DB2545CCBA87566C4E2903580706 /* fail.png */,
-				09F6D144DCA38BC502F1DB46760830D9 /* success.png */,
-				B1E1A85F9BC4C62109BE4945F0C0EA8E /* ZXToast.swift */,
-				8DF929B4A8B2E03FA46F819060FD134A /* ZXToastContentView.swift */,
-				604700061808F872146B563889C53DE8 /* Pod */,
-				662C2730046A2C35E877309D703F27A6 /* Support Files */,
+				0B8F8859BC4F02BA6B06D9F4C09F099F /* ResourceBundle-ZXToast-ZXToast-Info.plist */,
+				37398229E7CD8C106925BF21BDD8A56D /* ZXToast.modulemap */,
+				C1E9FD61DE319A94BA734FA0DD3BA44B /* ZXToast-dummy.m */,
+				0D769B275BEFF0EAC98CB0AADA784714 /* ZXToast-Info.plist */,
+				336F1405B3BC46E6E331A7CC5701A7CC /* ZXToast-prefix.pch */,
+				1AB795137A35361BE1A7ABDFB664F4E0 /* ZXToast-umbrella.h */,
+				66400B73EAC4470FF4A4D035917B73A9 /* ZXToast.debug.xcconfig */,
+				2DB2B6AFDA458F1045F060020F9B2275 /* ZXToast.release.xcconfig */,
 			);
-			name = ZXToast;
-			path = ../..;
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/ZXToast";
 			sourceTree = "<group>";
 		};
 		4BA2479549DD918290454B1CDCD0B92B /* Core */ = {
@@ -256,30 +265,26 @@
 			name = Core;
 			sourceTree = "<group>";
 		};
-		604700061808F872146B563889C53DE8 /* Pod */ = {
+		5B41C14354845661B06E72B00520E538 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				F817ED3F2120AEC2E8EB4D9B434A56A8 /* LICENSE */,
-				1D87B097406DBFAE8FCA7930F133AE6A /* README.md */,
-				18B7708FEDD4ECF923E75ED77DAB0D12 /* ZXToast.podspec */,
+				8FB7DA8E9534536044BCBFA965E2D0D7 /* ZXToast */,
 			);
-			name = Pod;
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		662C2730046A2C35E877309D703F27A6 /* Support Files */ = {
+		8FB7DA8E9534536044BCBFA965E2D0D7 /* ZXToast */ = {
 			isa = PBXGroup;
 			children = (
-				F826F726A817402C2144D0DE1BAE446A /* ResourceBundle-ZXToast-ZXToast-Info.plist */,
-				26FCE2B5CDDC91485EC1A13A7F7C92DE /* ZXToast.modulemap */,
-				525CF07BF8D163B3ADAF01D8D1057814 /* ZXToast-dummy.m */,
-				19B327E97974A74588ED709C1BB37578 /* ZXToast-Info.plist */,
-				EAB56AC2CA653DCFA67944EB3BA12C5D /* ZXToast-prefix.pch */,
-				4A312DFA02143B2E68C872618486666B /* ZXToast-umbrella.h */,
-				9AF639BC63A304ADE7B86DE0863AA76F /* ZXToast.debug.xcconfig */,
-				D306943D8A578DFF3F59E352E0A16934 /* ZXToast.release.xcconfig */,
+				5D690DDA8F68AFFDDDF4B1E8BD5CA0C8 /* Assets.xcassets */,
+				5CCB6D3E3F5E1CE09C8607CDCC615B04 /* ZXToast.swift */,
+				A890BF243EE02F5C404FDFD1977B0C5F /* ZXToastContentView.swift */,
+				18F1055E30E7B2BB02A08F96EF92D0A4 /* Pod */,
+				2C1BD7E0DE744CF9BA2508EFEA0FF5CF /* Support Files */,
+				D67F48B82BE8C83900192AF7 /* ToastManager.swift */,
 			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/ZXToast";
+			name = ZXToast;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		906402ECC4C6C5EB58DD365FD2C64E92 /* SwiftSupport */ = {
@@ -332,19 +337,11 @@
 			path = FBSnapshotTestCase;
 			sourceTree = "<group>";
 		};
-		C601836385B30A62D90360BE3606DBB7 /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				1FB4048CE77E388B25E59C24C00BB50E /* ZXToast */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				C601836385B30A62D90360BE3606DBB7 /* Development Pods */,
+				5B41C14354845661B06E72B00520E538 /* Development Pods */,
 				BA4F31F07263C99FC76E66D632A59F09 /* Frameworks */,
 				E81A37DBDE41E671312C56736544E2FA /* Pods */,
 				1B84287E05E73E0D1A0BB3D83D3B3B2B /* Products */,
@@ -435,11 +432,11 @@
 /* Begin PBXNativeTarget section */
 		4B664CB2609EEF1037F067C7F4181AE7 /* ZXToast-ZXToast */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3579B10642AD6CF96F3E2B0860E7EE57 /* Build configuration list for PBXNativeTarget "ZXToast-ZXToast" */;
+			buildConfigurationList = FD6B44D74C2512B4A6F3960527B8A888 /* Build configuration list for PBXNativeTarget "ZXToast-ZXToast" */;
 			buildPhases = (
-				018BF28B72805AEFC76C7CCB6E1360EC /* Sources */,
-				84A3753BD2EB5176277660C6305A5C1E /* Frameworks */,
-				C780EE3FEF5D82381E492FBC0CC90F5B /* Resources */,
+				86DBDF9D5E6220B590FBB64E6676DE47 /* Sources */,
+				F47E6005FF9EBB3099DF088D054FF338 /* Frameworks */,
+				E1DEFA1DD8BAD419E32D8BA35E4D7AAE /* Resources */,
 			);
 			buildRules = (
 			);
@@ -462,11 +459,11 @@
 			buildRules = (
 			);
 			dependencies = (
-				3D353F3147B628DDE7730A88AE2F5969 /* PBXTargetDependency */,
+				51CF4A9B1B58FEB8F5CBCED9BC9E9568 /* PBXTargetDependency */,
 			);
 			name = "Pods-ZXToast_Example";
 			productName = Pods_ZXToast_Example;
-			productReference = 2667BB0685AD4CD58DCD45457773AE7C /* Pods-ZXToast_Example */;
+			productReference = 2667BB0685AD4CD58DCD45457773AE7C /* Pods_ZXToast_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		950C263285320F8C7447CFD351F8C92C /* ZXToast */ = {
@@ -481,7 +478,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				5CA919A34A4AD3A608C6FB7FED227CAF /* PBXTargetDependency */,
+				7801637E456E82B8D668BF924846E40B /* PBXTargetDependency */,
 			);
 			name = ZXToast;
 			productName = ZXToast;
@@ -503,7 +500,7 @@
 			);
 			name = FBSnapshotTestCase;
 			productName = FBSnapshotTestCase;
-			productReference = 5C4F31330DFA99D699E4BDC8C3573D73 /* FBSnapshotTestCase */;
+			productReference = 5C4F31330DFA99D699E4BDC8C3573D73 /* FBSnapshotTestCase.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		D7F71C1821FA0905CB6416FCE42BD59F /* Pods-ZXToast_Tests */ = {
@@ -518,12 +515,12 @@
 			buildRules = (
 			);
 			dependencies = (
-				62FAB392FBEB5B27C7AAB145080B9DED /* PBXTargetDependency */,
-				ECF23B3029A60CD9F9DA9AA01072867C /* PBXTargetDependency */,
+				EF25BCF417844336743CF670517BBE5F /* PBXTargetDependency */,
+				DDB35A604B12E3E76A5334667D128494 /* PBXTargetDependency */,
 			);
 			name = "Pods-ZXToast_Tests";
 			productName = Pods_ZXToast_Tests;
-			productReference = B52DE76D5ED52A23935804B0E75EB1BB /* Pods-ZXToast_Tests */;
+			productReference = B52DE76D5ED52A23935804B0E75EB1BB /* Pods_ZXToast_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -532,8 +529,8 @@
 		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1240;
-				LastUpgradeCheck = 1240;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -587,26 +584,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C780EE3FEF5D82381E492FBC0CC90F5B /* Resources */ = {
+		E1DEFA1DD8BAD419E32D8BA35E4D7AAE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A85233E5526EBB8BD72AC305BD72B175 /* close.png in Resources */,
-				D89A68013DB42EBD64530FFD4796B1D1 /* fail.png in Resources */,
-				2EBF127A9E2FBB87DBC1DF55C0ECA4FA /* success.png in Resources */,
+				98904F566FB28ED24EAE18AD466BBC64 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		018BF28B72805AEFC76C7CCB6E1360EC /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		1F181B3A121905B3531E724339181AF9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -614,6 +602,7 @@
 				56F8961D19228954BCEBB5AF1DC5C32B /* ZXToast.swift in Sources */,
 				E1A7456641911A08E434B7A4C6A3F694 /* ZXToast-dummy.m in Sources */,
 				C80E876457A57BFEC48D7AE48F859665 /* ZXToastContentView.swift in Sources */,
+				D67F48B92BE8C83900192AF7 /* ToastManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -630,6 +619,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4433B0E8C010BF460D72F251FCB7793 /* Pods-ZXToast_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86DBDF9D5E6220B590FBB64E6676DE47 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -652,63 +648,33 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		3D353F3147B628DDE7730A88AE2F5969 /* PBXTargetDependency */ = {
+		51CF4A9B1B58FEB8F5CBCED9BC9E9568 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = ZXToast;
 			target = 950C263285320F8C7447CFD351F8C92C /* ZXToast */;
-			targetProxy = 636D12B8E8EE110390E4000722F4C9CA /* PBXContainerItemProxy */;
+			targetProxy = 80D9CE15073F1167FD0F34BBB807AB16 /* PBXContainerItemProxy */;
 		};
-		5CA919A34A4AD3A608C6FB7FED227CAF /* PBXTargetDependency */ = {
+		7801637E456E82B8D668BF924846E40B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "ZXToast-ZXToast";
 			target = 4B664CB2609EEF1037F067C7F4181AE7 /* ZXToast-ZXToast */;
-			targetProxy = 6E500EA619CCD26FB874E68EB3747519 /* PBXContainerItemProxy */;
+			targetProxy = 9597270325A91B0EA3AC6658E8E9B86C /* PBXContainerItemProxy */;
 		};
-		62FAB392FBEB5B27C7AAB145080B9DED /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = FBSnapshotTestCase;
-			target = 98A98149697C80CEF8D5772791E92E66 /* FBSnapshotTestCase */;
-			targetProxy = 87A67AF515A706ABC5BF245774C08FB6 /* PBXContainerItemProxy */;
-		};
-		ECF23B3029A60CD9F9DA9AA01072867C /* PBXTargetDependency */ = {
+		DDB35A604B12E3E76A5334667D128494 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-ZXToast_Example";
 			target = 8942C03B696E0EF91756AFD7FAA9F0C1 /* Pods-ZXToast_Example */;
-			targetProxy = AAFAF7D530A46149F0A06B2A8423AD5A /* PBXContainerItemProxy */;
+			targetProxy = 63ABDE4CAAC5FD9BA3D6DF4803B56EAA /* PBXContainerItemProxy */;
+		};
+		EF25BCF417844336743CF670517BBE5F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FBSnapshotTestCase;
+			target = 98A98149697C80CEF8D5772791E92E66 /* FBSnapshotTestCase */;
+			targetProxy = AF10B212D5C8C067DD5B5CB3A773E802 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		08EC3C4E440E9EC7CFAC89CB3016C7F8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9AF639BC63A304ADE7B86DE0863AA76F /* ZXToast.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/ZXToast/ZXToast-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ZXToast/ZXToast-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/ZXToast/ZXToast.modulemap";
-				PRODUCT_MODULE_NAME = ZXToast;
-				PRODUCT_NAME = ZXToast;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.5.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		0CF977E736A9F0297ED689DCD07C3E1C /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4C6513B09838318BD763CFD5390D1DE0 /* FBSnapshotTestCase.release.xcconfig */;
@@ -724,7 +690,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/FBSnapshotTestCase/FBSnapshotTestCase-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/FBSnapshotTestCase/FBSnapshotTestCase-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/FBSnapshotTestCase/FBSnapshotTestCase.modulemap";
 				PRODUCT_MODULE_NAME = FBSnapshotTestCase;
@@ -755,7 +721,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-ZXToast_Tests/Pods-ZXToast_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-ZXToast_Tests/Pods-ZXToast_Tests.modulemap";
@@ -773,10 +739,11 @@
 			};
 			name = Release;
 		};
-		1968692492448C35A65E026EED6358A6 /* Release */ = {
+		244762A89185995AEF437E2760223BCD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D306943D8A578DFF3F59E352E0A16934 /* ZXToast.release.xcconfig */;
+			baseConfigurationReference = 2DB2B6AFDA458F1045F060020F9B2275 /* ZXToast.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -788,7 +755,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/ZXToast/ZXToast-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/ZXToast/ZXToast-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/ZXToast/ZXToast.modulemap";
 				PRODUCT_MODULE_NAME = ZXToast;
@@ -803,22 +770,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
-		};
-		1FAFB3D25936DF72118C3590CE83857F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9AF639BC63A304ADE7B86DE0863AA76F /* ZXToast.debug.xcconfig */;
-			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/ZXToast";
-				IBSC_MODULE = ZXToast;
-				INFOPLIST_FILE = "Target Support Files/ZXToast/ResourceBundle-ZXToast-ZXToast-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				PRODUCT_NAME = ZXToast;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Debug;
 		};
 		25AD9454612BF454A1E3DC4CD4FA8C6D /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -886,6 +837,23 @@
 			};
 			name = Debug;
 		};
+		36BFA57669F99B95E4BB16FE80FDDA7B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 66400B73EAC4470FF4A4D035917B73A9 /* ZXToast.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/ZXToast";
+				IBSC_MODULE = ZXToast;
+				INFOPLIST_FILE = "Target Support Files/ZXToast/ResourceBundle-ZXToast-ZXToast-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				PRODUCT_NAME = ZXToast;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
 		70E5AA5DFEAF5F0961C1330EA50F35C1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B5FD51B83F14207BAC46A16DD8DB2A5F /* Pods-ZXToast_Tests.debug.xcconfig */;
@@ -901,7 +869,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-ZXToast_Tests/Pods-ZXToast_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-ZXToast_Tests/Pods-ZXToast_Tests.modulemap";
@@ -933,7 +901,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/FBSnapshotTestCase/FBSnapshotTestCase-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/FBSnapshotTestCase/FBSnapshotTestCase-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/FBSnapshotTestCase/FBSnapshotTestCase.modulemap";
 				PRODUCT_MODULE_NAME = FBSnapshotTestCase;
@@ -963,7 +931,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-ZXToast_Example/Pods-ZXToast_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-ZXToast_Example/Pods-ZXToast_Example.modulemap";
@@ -995,7 +963,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-ZXToast_Example/Pods-ZXToast_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-ZXToast_Example/Pods-ZXToast_Example.modulemap";
@@ -1010,6 +978,23 @@
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B34EA11FF87338C3C46CC38D79DA964A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2DB2B6AFDA458F1045F060020F9B2275 /* ZXToast.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/ZXToast";
+				IBSC_MODULE = ZXToast;
+				INFOPLIST_FILE = "Target Support Files/ZXToast/ResourceBundle-ZXToast-ZXToast-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				PRODUCT_NAME = ZXToast;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
 			};
 			name = Release;
 		};
@@ -1074,21 +1059,36 @@
 			};
 			name = Release;
 		};
-		F725F8C09E7DDFFD6117587CDDF94670 /* Release */ = {
+		DF5425F355B25590AA3A4AC64716858C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D306943D8A578DFF3F59E352E0A16934 /* ZXToast.release.xcconfig */;
+			baseConfigurationReference = 66400B73EAC4470FF4A4D035917B73A9 /* ZXToast.debug.xcconfig */;
 			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/ZXToast";
-				IBSC_MODULE = ZXToast;
-				INFOPLIST_FILE = "Target Support Files/ZXToast/ResourceBundle-ZXToast-ZXToast-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ZXToast/ZXToast-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ZXToast/ZXToast-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ZXToast/ZXToast.modulemap";
+				PRODUCT_MODULE_NAME = ZXToast;
 				PRODUCT_NAME = ZXToast;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.5.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
@@ -1098,15 +1098,6 @@
 			buildConfigurations = (
 				842C60C4F1EBC85F9C8FF97D39D120FF /* Debug */,
 				0CF977E736A9F0297ED689DCD07C3E1C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		3579B10642AD6CF96F3E2B0860E7EE57 /* Build configuration list for PBXNativeTarget "ZXToast-ZXToast" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1FAFB3D25936DF72118C3590CE83857F /* Debug */,
-				F725F8C09E7DDFFD6117587CDDF94670 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1132,8 +1123,8 @@
 		B990A0A4C6988F43417CF58F362B5DBD /* Build configuration list for PBXNativeTarget "ZXToast" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				08EC3C4E440E9EC7CFAC89CB3016C7F8 /* Debug */,
-				1968692492448C35A65E026EED6358A6 /* Release */,
+				DF5425F355B25590AA3A4AC64716858C /* Debug */,
+				244762A89185995AEF437E2760223BCD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1143,6 +1134,15 @@
 			buildConfigurations = (
 				A977A513C8F6BDB578591CA2C5237BF8 /* Debug */,
 				A9CCFD053E144E38DCDB769F8B1ECDD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FD6B44D74C2512B4A6F3960527B8A888 /* Build configuration list for PBXNativeTarget "ZXToast-ZXToast" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				36BFA57669F99B95E4BB16FE80FDDA7B /* Debug */,
+				B34EA11FF87338C3C46CC38D79DA964A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -28,15 +28,11 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'https://github.com/luckyczh/ZXToast.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '9.0'
+  s.ios.deployment_target = '12.0'
 
   s.source_files = 'ZXToast/Classes/**/*'
   
    s.resource_bundles = {
-     'ZXToast' => ['ZXToast/Assets/*.png']
+     'ZXToast' => ['ZXToast/Assets/*.xcassets']
    }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end

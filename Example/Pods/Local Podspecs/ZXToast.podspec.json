@@ -1,6 +1,6 @@
 {
   "name": "ZXToast",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "summary": "提供toast",
   "swift_versions": "5.5.2",
   "description": "TODO: Add long description of the pod here.",
@@ -14,15 +14,15 @@
   },
   "source": {
     "git": "https://github.com/luckyczh/ZXToast.git",
-    "tag": "0.1.1"
+    "tag": "0.1.2"
   },
   "platforms": {
-    "ios": "9.0"
+    "ios": "12.0"
   },
   "source_files": "ZXToast/Classes/**/*",
   "resource_bundles": {
     "ZXToast": [
-      "ZXToast/Assets/*.png"
+      "ZXToast/Assets/*.xcassets"
     ]
   },
   "swift_version": "5.5.2"

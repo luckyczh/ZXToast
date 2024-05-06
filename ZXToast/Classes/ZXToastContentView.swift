@@ -1,6 +1,6 @@
 //
 //  ToastContentView.swift
-//  Agriculture_Saas
+//  
 //
 //  Created by zxcl on 2022/1/4.
 //
@@ -38,43 +38,9 @@ extension UIWindow{
 
 
 
-public struct ToastManager{
-    public static var share = ToastManager()
-    /// loading框关闭按钮出现延迟
-    public var activityTime :TimeInterval = 8
-    /// toast 出现动画时间
-    public var fadeTime : TimeInterval = 0.2
-    
-    let ActivityMinWidth :CGFloat = 80
-    let ActivityMinHeight :CGFloat = 80
-    /// activity 标记
-    let activityTimeFlag :TimeInterval = -1
-    var toasts = [ZXToastContentView]()
-    var activities = [UIView]()
-    
-    private init() {}
-    
-    
-}
-
-
-struct ToasConfig {
-    var contentInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
-    var customerView : UIView?
-    var text = ""
-    var delay : TimeInterval = 0
-    var position = ZXToastContentView.ToastPosition.center
-}
-
 public class ZXToastContentView: UIView {
     
-   public enum ToastPosition {
-        case top
-        case center
-        case bottom
-    }
-    
-    private var inset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+    private var inset: UIEdgeInsets = .zero
     private var customerView : UIView?
     private var config = ToasConfig()
     
@@ -90,7 +56,7 @@ public class ZXToastContentView: UIView {
     
     private lazy var closeBtn: UIButton = {
         let btn = UIButton(type: .custom)
-        btn.setImage(loadBundleImage("close", bundleClass: ZXToastContentView.self), for: .normal)
+        btn.setImage(loadBundleImage("close"), for: .normal)
         btn.isHidden = true
         btn.addTarget(self, action: #selector(closeActivity), for: .touchUpInside)
         addSubview(btn)
@@ -128,7 +94,7 @@ public class ZXToastContentView: UIView {
         let hasTitle = !config.text.isEmpty
         if hasCustomView{
             if isActivity{
-                customerView!.transform = CGAffineTransform.init(scaleX: 1.1, y: 1.1)
+                customerView!.transform = CGAffineTransform.init(scaleX: 1.2, y: 1.2)
             }
             customerView!.frame.origin.y = inset.top
             addSubview(customerView!)
@@ -141,8 +107,8 @@ public class ZXToastContentView: UIView {
         var contentHeight :CGFloat = txSize.height
         if hasCustomView{
             if customerView is UIActivityIndicatorView{
-                contentWidth = max(max(customerView!.bounds.width, txSize.width), ToastManager.share.ActivityMinWidth)
-                contentHeight = max(customerView!.bounds.height + txSize.height + itemMargin(), ToastManager.share.ActivityMinHeight)
+                contentWidth = max(max(customerView!.bounds.width, txSize.width), ToastManager.share.activityMinWidth)
+                contentHeight = max(customerView!.bounds.height + txSize.height + itemMargin(), ToastManager.share.activityMinHeight)
             }else{
                 contentHeight = customerView!.bounds.height + txSize.height + itemMargin()
                 contentWidth = max(max(customerView!.bounds.width, txSize.width), contentHeight)
