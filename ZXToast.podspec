@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ZXToast'
-  s.version          = '0.1.2'
+  s.version          = '0.1.3'
   s.summary          = '提供toast'
   s.swift_version    = '5.5.2'
 
