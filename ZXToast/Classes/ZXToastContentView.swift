@@ -144,7 +144,7 @@ public class ZXToastContentView: UIView {
     }
     
     func insertToast(){
-        let window = UIApplication.shared.keyWindow!
+        guard let window = UIApplication.shared.delegate?.window,let window = window else { return }
         layoutIfNeeded()
         switch config.position {
         case .top:
