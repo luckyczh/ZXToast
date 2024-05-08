@@ -25,19 +25,46 @@ struct ToasConfig {
 public struct ToastManager{
     
     public static var share = ToastManager()
+    
+    /// loading是否显示关闭按钮
+    public var enbaleActivityClose = false
     /// loading框关闭按钮出现延迟
     public var activityTime :TimeInterval = 8
     /// toast 出现动画时间
     public var fadeTime : TimeInterval = 0.2
+    /// toast 最小宽高
+    public var toastMinWidth :CGFloat = 80
+    public var toastMinHeight :CGFloat = 80
+    /// 是否开启队列显示
+    public var enableQueue = false
     
-    let activityMinWidth :CGFloat = 80
-    let activityMinHeight :CGFloat = 80
-    /// activity 标记
-    let activityTimeFlag :TimeInterval = -1
     var toasts = [ZXToastContentView]()
-    var activities = [UIView]()
+    var activity: ZXToastContentView?
     
     private init() {}
+    
+    
+    
+    
+    func insert(_ toast:ZXToastContentView){
+        guard !toast.isActivity else {
+            ToastManager.share.activity = toast
+            toast.showActivity()
+            return
+        }
+        if ToastManager.share.enableQueue {
+            ToastManager.share.toasts.append(toast)
+            if ToastManager.share.toasts.count <= 1{
+                toast.showText()
+            }
+        }else {
+            ToastManager.share.toasts.forEach({$0.removeFromSuperview()})
+            ToastManager.share.toasts = [toast]
+            toast.showText()
+        }
+        
+        
+    }
     
     
 }

@@ -9,22 +9,21 @@ import Foundation
 import UIKit
 
 
-
+/// activity 标记
+let activityTimeFlag :TimeInterval = -1
 
 public struct ZXToast{
     
     public static func showActivity(_ text: String=""){
-        DispatchQueue.main.async {
-            var activity : UIActivityIndicatorView!
-            if #available(iOS 13.0, *) {
-                activity = UIActivityIndicatorView(style: .large)
-            } else {
-                activity = UIActivityIndicatorView(style: .whiteLarge)
-            }
-            activity.color = .white
-            activity.startAnimating()
-            show(activity, text: text, position: .center,delayHide: ToastManager.share.activityTimeFlag)
+        var activity : UIActivityIndicatorView!
+        if #available(iOS 13.0, *) {
+            activity = UIActivityIndicatorView(style: .large)
+        } else {
+            activity = UIActivityIndicatorView(style: .whiteLarge)
         }
+        activity.color = .white
+        activity.startAnimating()
+        show(activity, text: text, position: .center,delayHide: activityTimeFlag)
     }
     
     
@@ -43,12 +42,10 @@ public struct ZXToast{
     }
     
     public static func showImage(_ image: UIImage,text: String){
-        DispatchQueue.main.async {
-            let imageView = UIImageView(image: image)
-            imageView.contentMode = .scaleAspectFit
-            imageView.bounds = CGRect(x: 0, y: 0, width: 40, height: 40)
-            show(imageView, text: text, position: .center, delayHide: 1.5)
-        }
+        let imageView = UIImageView(image: image)
+        imageView.contentMode = .scaleAspectFit
+        imageView.bounds = CGRect(x: 0, y: 0, width: 40, height: 40)
+        show(imageView, text: text, position: .center, delayHide: 1.5)
     }
 
     
@@ -56,29 +53,34 @@ public struct ZXToast{
    public static func show(_ customerView: UIView?=nil,text: String,position: ToastPosition,delayHide: TimeInterval){
        guard (customerView != nil || !text.isEmpty) else {
            return
-       }
-        DispatchQueue.main.async {
-            let config = ToasConfig(customerView: customerView, text: text, delay: delayHide, position: position)
-            let vi = ZXToastContentView(config: config)
-            vi.insertToast()
-        }
+       }            
+       let config = ToasConfig(customerView: customerView, text: text, delay: delayHide, position: position)
+       
+//       guard !ToastManager.share.enableQueue else {
+           let toastView = ZXToastContentView(config: config)
+           ToastManager.share.insert(toastView)
+//           return
+//       }
+//       
+//       if let toastView = ToastManager.share.toasts.first{
+//           toastView.updateConfig(config)
+//       }else {
+//           let toastView = ZXToastContentView(config: config)
+//           ToastManager.share.insert(toastView)
+//       }
+            
 
     }
    public static func hideActivity(){
-        DispatchQueue.main.async {
-             while !ToastManager.share.activities.isEmpty{
-                 let lastToast = ToastManager.share.activities.removeLast()
-                     lastToast.removeFromSuperview()
-             }
-        }
+       ToastManager.share.activity?.hideActivity()
     }
     
     private static func textShowTime(text: String) -> TimeInterval{
-        if text.count <= 20{
+        if text.count <= 10{
             return 1
-        }else if text.count <= 40{
+        }else if text.count <= 20{
             return 2
-        }else if text.count <= 50{
+        }else if text.count <= 40{
             return 2.5
         }else{
             return 3

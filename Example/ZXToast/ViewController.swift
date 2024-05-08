@@ -21,11 +21,13 @@ class ViewController: UIViewController {
     }()
     
     let titles = ["提示1","多个提示","成功","失败","loading"]
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         tableView.reloadData()
+        ToastManager.share.enableQueue = true
+        ToastManager.share.enbaleActivityClose = true
     }
 
     override func didReceiveMemoryWarning() {

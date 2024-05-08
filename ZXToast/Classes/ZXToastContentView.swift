@@ -42,9 +42,14 @@ public class ZXToastContentView: UIView {
     
     private var inset: UIEdgeInsets = .zero
     private var customerView : UIView?
-    private var config = ToasConfig()
+    var config = ToasConfig()
     
     var isActivity = false
+    
+    var isUpdate = false
+    
+    var timer: Timer?
+    
     private lazy var titleLabel: UILabel = {
         let lab = UILabel()
         lab.font = UIFont.systemFont(ofSize: 15)
@@ -58,7 +63,7 @@ public class ZXToastContentView: UIView {
         let btn = UIButton(type: .custom)
         btn.setImage(loadBundleImage("close"), for: .normal)
         btn.isHidden = true
-        btn.addTarget(self, action: #selector(closeActivity), for: .touchUpInside)
+        btn.addTarget(self, action: #selector(hideActivity), for: .touchUpInside)
         addSubview(btn)
         return btn
     }()
@@ -72,7 +77,7 @@ public class ZXToastContentView: UIView {
         titleLabel.text = config.text
         inset = config.contentInset
         customerView = config.customerView
-        isActivity = config.delay == ToastManager.share.activityTimeFlag
+        isActivity = config.delay == activityTimeFlag
         self.config = config
     }
 
@@ -107,8 +112,8 @@ public class ZXToastContentView: UIView {
         var contentHeight :CGFloat = txSize.height
         if hasCustomView{
             if customerView is UIActivityIndicatorView{
-                contentWidth = max(max(customerView!.bounds.width, txSize.width), ToastManager.share.activityMinWidth)
-                contentHeight = max(customerView!.bounds.height + txSize.height + itemMargin(), ToastManager.share.activityMinHeight)
+                contentWidth = max(max(customerView!.bounds.width, txSize.width), ToastManager.share.toastMinWidth)
+                contentHeight = max(customerView!.bounds.height + txSize.height + itemMargin(), ToastManager.share.toastMinHeight)
             }else{
                 contentHeight = customerView!.bounds.height + txSize.height + itemMargin()
                 contentWidth = max(max(customerView!.bounds.width, txSize.width), contentHeight)
@@ -134,17 +139,8 @@ public class ZXToastContentView: UIView {
         
     }
     
-    @objc func closeActivity(){
-        UIView.animate(withDuration: ToastManager.share.fadeTime) {
-            ToastManager.share.activities.first?.alpha = 0
-        } completion: { _ in
-            ToastManager.share.activities.first?.removeFromSuperview()
-            ToastManager.share.activities.removeFirst()
-        }
-    }
-    
-    func insertToast(){
-        guard let window = UIApplication.shared.delegate?.window,let window = window else { return }
+    func updateFrame() {
+        guard let window = UIApplication.shared.delegate?.window, let window = window else { return }
         layoutIfNeeded()
         switch config.position {
         case .top:
@@ -156,51 +152,68 @@ public class ZXToastContentView: UIView {
             center.x = window.center.x
             frame.origin.y = window.bounds.height - bounds.height - window.zx_safeAreaInsets.bottom - 20
         }
-        if isActivity{
-            let warpperView = UIView(frame: UIScreen.main.bounds)
-            warpperView.backgroundColor = .clear
-            warpperView.addSubview(self)
-            warpperView.alpha = 0
-            center = warpperView.center
-            ToastManager.share.activities.append(warpperView)
-            showActivity()
-        }else{
-            alpha = 0
-            ToastManager.share.toasts.append(self)
-            if ToastManager.share.toasts.count <= 1{
-                showToast()
-            }
-        }
-        
     }
     
-
-    func showToast(){
-        let window = UIApplication.shared.keyWindow!
-        objc_sync_enter(self)
-        if let toast = ToastManager.share.toasts.first{
-            window.addSubview(toast)
-            let timer = Timer.init(timeInterval: config.delay, target: self, selector: #selector(hide(timer:)), userInfo: ["toast":toast], repeats: false)
-            RunLoop.current.add(timer, forMode: .common)
-            UIView.animate(withDuration: ToastManager.share.fadeTime) {
-                toast.alpha = 1
-            }
+    @objc func hideActivity(){
+        UIView.animate(withDuration: ToastManager.share.fadeTime) {
+            self.alpha = 0
+        } completion: { _ in
+            self.superview?.removeFromSuperview()
+            ToastManager.share.activity = nil
         }
-        objc_sync_exit(self)
+    }
+    
+    
+//    func updateConfig(_ config:ToasConfig) {
+//        titleLabel.text = config.text
+//        inset = config.contentInset
+//        customerView = config.customerView
+//        updateFrame()
+//        timerInvalidate()
+//        timer = Timer.init(timeInterval: config.delay, target: self, selector: #selector(hide), userInfo: nil, repeats: false)
+//        RunLoop.current.add(timer!, forMode: .common)
+//    }
+    
+
+    func showText(){
+        guard let window = UIApplication.shared.delegate?.window, let window = window else { return }
+        alpha = 0
+        window.addSubview(self)
+        updateFrame()
+        timerInvalidate()
+        timer = Timer.init(timeInterval: config.delay, target: self, selector: #selector(hide), userInfo: nil, repeats: false)
+        RunLoop.current.add(timer!, forMode: .common)
+        UIView.animate(withDuration: ToastManager.share.fadeTime) {
+            self.alpha = 1
+        }
     }
     
     func showActivity(){
-        let window = UIApplication.shared.keyWindow!
-        objc_sync_enter(self)
-        if let activity = ToastManager.share.activities.last{
-            window.addSubview(activity)
+        guard let window = UIApplication.shared.delegate?.window, let window = window else { return }
+        let maskView = UIView(frame: UIScreen.main.bounds)
+        maskView.backgroundColor = .clear
+        maskView.addSubview(self)
+        maskView.alpha = 0
+        center = maskView.center
+        window.addSubview(maskView)
+        if ToastManager.share.enbaleActivityClose {
             let timer = Timer.init(timeInterval: ToastManager.share.activityTime, target: self, selector: #selector(showCloseBtn(timer:)), userInfo: nil, repeats: false)
             RunLoop.current.add(timer, forMode: .common)
-            UIView.animate(withDuration: ToastManager.share.fadeTime) {
-                activity.alpha = 1
-            }
         }
-        objc_sync_exit(self)
+        
+        UIView.animate(withDuration: ToastManager.share.fadeTime) {
+            maskView.alpha = 1
+        }
+    }
+    
+    deinit {
+        timerInvalidate()
+    }
+    
+    
+    func timerInvalidate() {
+        timer?.invalidate()
+        timer = nil
     }
     
     @objc func showCloseBtn(timer:Timer){
@@ -208,21 +221,14 @@ public class ZXToastContentView: UIView {
         timer.invalidate()
     }
     
-    @objc func hide(timer:Timer){
-        guard let userInfo = timer.userInfo as? [String:ZXToastContentView],let toast = userInfo["toast"] else{
-            return
-        }
-        timer.invalidate()
-        DispatchQueue.main.async {
-            UIView.animate(withDuration: ToastManager.share.fadeTime) {
-                toast.alpha = 0
-            } completion: { _ in
-                toast.removeFromSuperview()
-                ToastManager.share.toasts.removeAll(where: {$0===toast})
-                if !ToastManager.share.toasts.isEmpty{
-                    toast.showToast()
-                }
-            }
+    @objc func hide(){
+        timerInvalidate()
+        UIView.animate(withDuration: ToastManager.share.fadeTime) {
+            self.alpha = 0
+        } completion: { _ in
+            ToastManager.share.toasts.removeAll(where: {$0===self})
+            self.removeFromSuperview()
+            ToastManager.share.toasts.first?.showText()
         }
     }
     
