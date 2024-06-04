@@ -162,18 +162,6 @@ public class ZXToastContentView: UIView {
             ToastManager.share.activity = nil
         }
     }
-    
-    
-//    func updateConfig(_ config:ToasConfig) {
-//        titleLabel.text = config.text
-//        inset = config.contentInset
-//        customerView = config.customerView
-//        updateFrame()
-//        timerInvalidate()
-//        timer = Timer.init(timeInterval: config.delay, target: self, selector: #selector(hide), userInfo: nil, repeats: false)
-//        RunLoop.current.add(timer!, forMode: .common)
-//    }
-    
 
     func showText(){
         guard let window = UIApplication.shared.delegate?.window, let window = window else { return }
@@ -209,7 +197,6 @@ public class ZXToastContentView: UIView {
     deinit {
         timerInvalidate()
     }
-    
     
     func timerInvalidate() {
         timer?.invalidate()

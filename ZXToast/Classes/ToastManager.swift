@@ -42,10 +42,7 @@ public struct ToastManager{
     var activity: ZXToastContentView?
     
     private init() {}
-    
-    
-    
-    
+
     func insert(_ toast:ZXToastContentView){
         guard !toast.isActivity else {
             ToastManager.share.activity = toast
@@ -62,9 +59,5 @@ public struct ToastManager{
             ToastManager.share.toasts = [toast]
             toast.showText()
         }
-        
-        
     }
-    
-    
 }

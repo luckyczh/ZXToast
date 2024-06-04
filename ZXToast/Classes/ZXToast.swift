@@ -15,6 +15,9 @@ let activityTimeFlag :TimeInterval = -1
 public struct ZXToast{
     
     public static func showActivity(_ text: String=""){
+        guard ToastManager.share.activity == nil else {
+            return
+        }
         var activity : UIActivityIndicatorView!
         if #available(iOS 13.0, *) {
             activity = UIActivityIndicatorView(style: .large)
@@ -26,15 +29,12 @@ public struct ZXToast{
         show(activity, text: text, position: .center,delayHide: activityTimeFlag)
     }
     
-    
     public static func showText(_ text: String,position: ToastPosition = .center){
         show(nil, text: text, position: position,delayHide: textShowTime(text: text))
     }
-    
-    
+ 
     public static func showSuccess(_ text: String=""){
         showImage(loadBundleImage("success"), text: text)
-
     }
     
     public static func showError(_ text: String=""){
@@ -47,30 +47,16 @@ public struct ZXToast{
         imageView.bounds = CGRect(x: 0, y: 0, width: 40, height: 40)
         show(imageView, text: text, position: .center, delayHide: 1.5)
     }
-
-    
-    
+ 
    public static func show(_ customerView: UIView?=nil,text: String,position: ToastPosition,delayHide: TimeInterval){
        guard (customerView != nil || !text.isEmpty) else {
            return
        }            
        let config = ToasConfig(customerView: customerView, text: text, delay: delayHide, position: position)
-       
-//       guard !ToastManager.share.enableQueue else {
-           let toastView = ZXToastContentView(config: config)
-           ToastManager.share.insert(toastView)
-//           return
-//       }
-//       
-//       if let toastView = ToastManager.share.toasts.first{
-//           toastView.updateConfig(config)
-//       }else {
-//           let toastView = ZXToastContentView(config: config)
-//           ToastManager.share.insert(toastView)
-//       }
-            
-
+       let toastView = ZXToastContentView(config: config)
+       ToastManager.share.insert(toastView)
     }
+    
    public static func hideActivity(){
        ToastManager.share.activity?.hideActivity()
     }
@@ -78,7 +64,9 @@ public struct ZXToast{
     private static func textShowTime(text: String) -> TimeInterval{
         if text.count <= 10{
             return 1
-        }else if text.count <= 20{
+        }else if text.count <= 15{
+            return 1.5
+        }else if text.count <= 25{
             return 2
         }else if text.count <= 40{
             return 2.5
