@@ -8,7 +8,7 @@
 
 import UIKit
 import ZXToast
-class ViewController: UIViewController {
+class ViewController: UIViewController, CAAnimationDelegate {
     
     lazy var tableView: UITableView = {
         let table = UITableView.init(frame: view.bounds, style: .plain)
@@ -21,13 +21,115 @@ class ViewController: UIViewController {
     }()
     
     let titles = ["提示1","多个提示","成功","失败","loading"]
-
+    var lock = NSConditionLock(condition: 1)
+    let dispatchSem = DispatchSemaphore(value: 1)
+    var lab = UILabel(frame: CGRect(x: 100, y: 100, width: 100, height: 30))
+    var desLabel = UILabel(frame: CGRect(x: 100, y: 130, width: 100, height: 30))
+    var lockObj = "fewfe"
+    
+    var group = CAAnimationGroup()
+    var group1 = CAAnimationGroup()
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        tableView.reloadData()
-        ToastManager.share.enableQueue = true
-        ToastManager.share.enbaleActivityClose = true
+//        lab.textColor = .red
+//        lab.font = UIFont.systemFont(ofSize: 15)
+//        lab.text = "动画文字"
+//        view.addSubview(lab)
+//        desLabel.font = UIFont.systemFont(ofSize: 13)
+//        desLabel.textColor = .systemRed
+//        desLabel.text = "下面是描述问法兰克福节微积分"
+//        view.addSubview(desLabel)
+//
+//        let btn = UIButton(frame: CGRect(x: 100, y: 200, width: 100, height: 100))
+//        btn.backgroundColor = .blue
+//        btn.addTarget(self, action: #selector(loading), for: .touchUpInside)
+//        view.addSubview(btn)
+//        lab.layer.opacity = 0
+//        desLabel.layer.opacity = 0
+        loading()
+    }
+    
+    @objc func loading() {
+        let vi = UIView(frame: CGRect(x: 100, y: 100, width: 100, height: 100))
+        view.addSubview(vi)
+        let layer = CAShapeLayer()
+        layer.path = UIBezierPath(roundedRect: CGRect(x: 0, y: 0, width: 100, height: 100), cornerRadius: 50).cgPath
+        layer.fillColor = UIColor.clear.cgColor
+        layer.lineWidth = 2
+        layer.strokeColor = UIColor.red.cgColor
+        vi.layer.addSublayer(layer)
+        
+        let strokeStartAnimation = CABasicAnimation(keyPath: "strokeStart")
+        strokeStartAnimation.fromValue = -1
+        strokeStartAnimation.toValue = 1
+
+        let strokeEndAnimation = CABasicAnimation(keyPath: "strokeEnd")
+        strokeEndAnimation.fromValue = 0
+        strokeEndAnimation.toValue = 1.0
+
+        let animationGroup = CAAnimationGroup()
+        animationGroup.duration = 2
+        animationGroup.repeatCount = Float.infinity
+        animationGroup.animations = [strokeStartAnimation, strokeEndAnimation]
+        layer.add(animationGroup, forKey: "animationGroup")
+        
+        let rotateAnimation = CABasicAnimation(keyPath: "transform.rotation")
+        rotateAnimation.fromValue = 0
+        rotateAnimation.toValue = Float.pi * 2
+        rotateAnimation.repeatCount = Float.infinity
+        rotateAnimation.duration = 2
+        rotateAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionDefault)
+        vi.layer.add(rotateAnimation, forKey: "rotateAnimation")
+        
+    }
+    
+    
+  @objc  func startAnimation() {
+//        let group = CAAnimationGroup()
+      group.duration = 0.3
+       group.delegate = self
+        let alAn = CABasicAnimation(keyPath: "opacity")
+        alAn.fromValue = 0
+        alAn.toValue = 1
+      alAn.duration = 0.8
+        alAn.isRemovedOnCompletion = false
+        let moveAn = CABasicAnimation(keyPath: "position.x")
+        moveAn.fromValue = 200
+        moveAn.toValue = 150
+      moveAn.duration = 0.3
+        group.animations = [alAn, moveAn]
+        group.isRemovedOnCompletion = false
+        lab.layer.add(group, forKey: nil)
+      
+//      let group1 = CAAnimationGroup()
+      group1.duration = 0.3
+      group1.beginTime = 0.2
+      group1.delegate = self
+      let alAn1 = CABasicAnimation(keyPath: "opacity")
+      alAn1.fromValue = 0
+      alAn1.toValue = 1
+      alAn1.duration = 0.8
+      alAn1.isRemovedOnCompletion = false
+      let moveAn1 = CABasicAnimation(keyPath: "position.x")
+      moveAn1.fromValue = 200
+      moveAn1.toValue = 150
+      moveAn1.duration = 0.3
+      group1.animations = [alAn1, moveAn1]
+      group1.isRemovedOnCompletion = false
+      desLabel.layer.add(group1, forKey: nil)
+        
+    }
+    func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
+//        if anim == group {
+            lab.layer.opacity = 1
+
+//        }
+//        if anim == group1 {
+            desLabel.layer.opacity = 1
+
+//        }
+        
     }
 
     override func didReceiveMemoryWarning() {

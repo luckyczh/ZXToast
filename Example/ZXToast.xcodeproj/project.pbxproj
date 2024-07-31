@@ -15,6 +15,7 @@
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		7DA10D08F74D825E9A85F70A /* Pods_ZXToast_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1C087410006C263165125FA /* Pods_ZXToast_Example.framework */; };
 		97295E58F3BCB02D152A3C35 /* Pods_ZXToast_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 429F43C93B19556B73F44C3E /* Pods_ZXToast_Tests.framework */; };
+		D6B8E4AA2C3530D300F10F37 /* connect.svg in Resources */ = {isa = PBXBuildFile; fileRef = D6B8E4A92C3530D300F10F37 /* connect.svg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		9F38A663014A7EB54B6CA525 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		A116E5207041429101FA3F0B /* ZXToast.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ZXToast.podspec; path = ../ZXToast.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		B1C087410006C263165125FA /* Pods_ZXToast_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZXToast_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6B8E4A92C3530D300F10F37 /* connect.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = connect.svg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				D6B8E4A92C3530D300F10F37 /* connect.svg */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -250,6 +253,7 @@
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
+				D6B8E4AA2C3530D300F10F37 /* connect.svg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,10 +314,14 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-ZXToast_Example/Pods-ZXToast_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
+				"${BUILT_PRODUCTS_DIR}/SVGKit/SVGKit.framework",
 				"${BUILT_PRODUCTS_DIR}/ZXToast/ZXToast.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVGKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZXToast.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;

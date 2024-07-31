@@ -15,9 +15,6 @@ let activityTimeFlag :TimeInterval = -1
 public struct ZXToast{
     
     public static func showActivity(_ text: String=""){
-        guard ToastManager.share.activity == nil else {
-            return
-        }
         var activity : UIActivityIndicatorView!
         if #available(iOS 13.0, *) {
             activity = UIActivityIndicatorView(style: .large)
@@ -29,34 +26,39 @@ public struct ZXToast{
         show(activity, text: text, position: .center,delayHide: activityTimeFlag)
     }
     
+    
     public static func showText(_ text: String,position: ToastPosition = .center){
         show(nil, text: text, position: position,delayHide: textShowTime(text: text))
     }
- 
+    
+    
     public static func showSuccess(_ text: String=""){
         showImage(loadBundleImage("success"), text: text)
+
     }
     
     public static func showError(_ text: String=""){
         showImage(loadBundleImage("fail"), text: text)
     }
     
-    public static func showImage(_ image: UIImage,text: String){
+    public static func showImage(_ image: UIImage?,text: String, style: ToastStyle? = nil){
         let imageView = UIImageView(image: image)
         imageView.contentMode = .scaleAspectFit
         imageView.bounds = CGRect(x: 0, y: 0, width: 40, height: 40)
-        show(imageView, text: text, position: .center, delayHide: 1.5)
+        show(imageView, text: text, position: .center, delayHide: 1.5, style: style)
     }
- 
-   public static func show(_ customerView: UIView?=nil,text: String,position: ToastPosition,delayHide: TimeInterval){
+
+    
+    
+    public static func show(_ customerView: UIView?=nil,text: String,position: ToastPosition,delayHide: TimeInterval, style: ToastStyle? = nil){
        guard (customerView != nil || !text.isEmpty) else {
            return
-       }            
-       let config = ToasConfig(customerView: customerView, text: text, delay: delayHide, position: position)
+       }
+       var config = ToasConfig(customerView: customerView, text: text, delay: delayHide, position: position)
+       config.style = style ?? ToastStyle()
        let toastView = ZXToastContentView(config: config)
        ToastManager.share.insert(toastView)
     }
-    
    public static func hideActivity(){
        ToastManager.share.activity?.hideActivity()
     }
@@ -64,9 +66,7 @@ public struct ZXToast{
     private static func textShowTime(text: String) -> TimeInterval{
         if text.count <= 10{
             return 1
-        }else if text.count <= 15{
-            return 1.5
-        }else if text.count <= 25{
+        }else if text.count <= 20{
             return 2
         }else if text.count <= 40{
             return 2.5

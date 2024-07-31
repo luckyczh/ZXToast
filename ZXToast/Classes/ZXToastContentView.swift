@@ -1,6 +1,6 @@
 //
 //  ToastContentView.swift
-//  
+//
 //
 //  Created by zxcl on 2022/1/4.
 //
@@ -70,13 +70,12 @@ public class ZXToastContentView: UIView {
     
     init(config:ToasConfig) {
         super.init(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width * 0.8, height: 0))
-        layer.cornerRadius = 5
-        backgroundColor = .black
         autoresizingMask = [.flexibleLeftMargin, .flexibleRightMargin, .flexibleTopMargin, .flexibleBottomMargin]
         addSubview(titleLabel)
         titleLabel.text = config.text
-        inset = config.contentInset
+        inset = config.style.contentInset
         customerView = config.customerView
+        configStyle()
         isActivity = config.delay == activityTimeFlag
         self.config = config
     }
@@ -139,6 +138,14 @@ public class ZXToastContentView: UIView {
         
     }
     
+    func configStyle() {
+        let style = config.style
+        titleLabel.textColor = style.textColor
+        titleLabel.font = style.textFont
+        backgroundColor = style.backgroundColor
+        layer.cornerRadius = style.cornerRadius
+    }
+    
     func updateFrame() {
         guard let window = UIApplication.shared.delegate?.window, let window = window else { return }
         layoutIfNeeded()
@@ -162,6 +169,18 @@ public class ZXToastContentView: UIView {
             ToastManager.share.activity = nil
         }
     }
+    
+    
+//    func updateConfig(_ config:ToasConfig) {
+//        titleLabel.text = config.text
+//        inset = config.contentInset
+//        customerView = config.customerView
+//        updateFrame()
+//        timerInvalidate()
+//        timer = Timer.init(timeInterval: config.delay, target: self, selector: #selector(hide), userInfo: nil, repeats: false)
+//        RunLoop.current.add(timer!, forMode: .common)
+//    }
+    
 
     func showText(){
         guard let window = UIApplication.shared.delegate?.window, let window = window else { return }
@@ -197,6 +216,7 @@ public class ZXToastContentView: UIView {
     deinit {
         timerInvalidate()
     }
+    
     
     func timerInvalidate() {
         timer?.invalidate()
