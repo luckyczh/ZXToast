@@ -1,6 +1,6 @@
 {
   "name": "ZXToast",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "summary": "提供toast",
   "swift_versions": "5.5.2",
   "description": "TODO: Add long description of the pod here.",
@@ -14,7 +14,7 @@
   },
   "source": {
     "git": "https://github.com/luckyczh/ZXToast.git",
-    "tag": "0.1.6"
+    "tag": "0.1.7"
   },
   "platforms": {
     "ios": "12.0"

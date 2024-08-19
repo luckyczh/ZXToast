@@ -47,7 +47,8 @@ class ViewController: UIViewController, CAAnimationDelegate {
 //        view.addSubview(btn)
 //        lab.layer.opacity = 0
 //        desLabel.layer.opacity = 0
-        loading()
+//        loading()
+        tableView.reloadData()
     }
     
     @objc func loading() {
@@ -165,7 +166,50 @@ extension ViewController:UITableViewDataSource,UITableViewDelegate{
         case 2:
             ZXToast.showSuccess("成功")
         case 3:
-            ZXToast.showError("失败")
+            DispatchQueue.global().async {
+                DispatchQueue.main.async {
+                    ZXToast.showError("失败7")
+
+                }
+            }
+            DispatchQueue.global().async {
+                DispatchQueue.main.async {
+                    ZXToast.showError("失败6")
+
+                }
+            }
+            DispatchQueue.global().async {
+                DispatchQueue.main.async {
+                    ZXToast.showError("失败5")
+
+                }
+            }
+            DispatchQueue.global().async {
+                DispatchQueue.main.async {
+                    ZXToast.showError("失败4")
+
+                }
+            }
+            DispatchQueue.global().async {
+                DispatchQueue.main.async {
+                    ZXToast.showError("失败3")
+
+                }
+            }
+            DispatchQueue.global().async {
+                DispatchQueue.main.async {
+                    ZXToast.showError("失败2")
+
+                }
+            }
+            DispatchQueue.global().async {
+                DispatchQueue.main.async {
+                    ZXToast.showError("失败1")
+
+                }
+            }
+           
+            
         case 4:
             ZXToast.showActivity()
         default:

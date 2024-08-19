@@ -1,37 +1,16 @@
 PODS:
-  - CocoaLumberjack (3.7.4):
-    - CocoaLumberjack/Core (= 3.7.4)
-  - CocoaLumberjack/Core (3.7.4)
-  - FBSnapshotTestCase (2.1.4):
-    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
-  - FBSnapshotTestCase/Core (2.1.4)
-  - FBSnapshotTestCase/SwiftSupport (2.1.4):
-    - FBSnapshotTestCase/Core
-  - SVGKit (3.0.0):
-    - CocoaLumberjack (~> 3.0)
-  - ZXToast (0.1.6)
+  - ZXToast (0.1.7)
 
 DEPENDENCIES:
-  - FBSnapshotTestCase (~> 2.1.4)
-  - SVGKit
   - ZXToast (from `../`)
-
-SPEC REPOS:
-  trunk:
-    - CocoaLumberjack
-    - FBSnapshotTestCase
-    - SVGKit
 
 EXTERNAL SOURCES:
   ZXToast:
     :path: "../"
 
 SPEC CHECKSUMS:
-  CocoaLumberjack: 543c79c114dadc3b1aba95641d8738b06b05b646
-  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
-  SVGKit: 1ad7513f8c74d9652f94ed64ddecda1a23864dea
-  ZXToast: 76709b634a29c9705f45f0bc7a7b571f12f69e38
+  ZXToast: e8047bd26349fc9c587a0ddb02a5e3dd2c1cf791
 
-PODFILE CHECKSUM: fc03be24cb33282a99989b6e23c83a5b064427fd
+PODFILE CHECKSUM: a7e856302b1194b399a2e584687436d126fdef94
 
-COCOAPODS: 1.14.3
+COCOAPODS: 1.15.2

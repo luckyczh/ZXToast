@@ -235,7 +235,9 @@ public class ZXToastContentView: UIView {
         } completion: { _ in
             ToastManager.share.toasts.removeAll(where: {$0===self})
             self.removeFromSuperview()
-            ToastManager.share.toasts.first?.showText()
+            if ToastManager.share.enableQueue {
+                ToastManager.share.toasts.first?.showText()
+            }
         }
     }
     
