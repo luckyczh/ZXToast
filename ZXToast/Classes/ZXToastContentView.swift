@@ -161,7 +161,8 @@ public class ZXToastContentView: UIView {
         }
     }
     
-    @objc func hideActivity(){
+    @objc func hideActivity(force:Bool = false){
+        if config.isForce && !force { return }
         UIView.animate(withDuration: ToastManager.share.fadeTime) {
             self.alpha = 0
         } completion: { _ in

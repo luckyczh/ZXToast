@@ -40,6 +40,7 @@ struct ToasConfig {
     var delay : TimeInterval = 0
     var position = ToastPosition.center
     var style = ToastStyle()
+    var isForce = false
 }
 
 public struct ToastManager{

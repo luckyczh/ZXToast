@@ -14,7 +14,7 @@ let activityTimeFlag :TimeInterval = -1
 
 public struct ZXToast{
     
-    public static func showActivity(_ text: String=""){
+    public static func showActivity(_ text: String="", isForce: Bool = false){
         var activity : UIActivityIndicatorView!
         if #available(iOS 13.0, *) {
             activity = UIActivityIndicatorView(style: .large)
@@ -23,7 +23,7 @@ public struct ZXToast{
         }
         activity.color = .white
         activity.startAnimating()
-        show(activity, text: text, position: .center,delayHide: activityTimeFlag)
+        show(activity, text: text, position: .center,delayHide: activityTimeFlag, isForce: isForce)
     }
     
     
@@ -50,18 +50,24 @@ public struct ZXToast{
 
     
     
-    public static func show(_ customerView: UIView?=nil,text: String,position: ToastPosition,delayHide: TimeInterval, style: ToastStyle? = nil){
+    public static func show(_ customerView: UIView?=nil,text: String,position: ToastPosition,delayHide: TimeInterval, style: ToastStyle? = nil, isForce: Bool = false){
        guard (customerView != nil || !text.isEmpty) else {
            return
        }
        var config = ToasConfig(customerView: customerView, text: text, delay: delayHide, position: position)
        config.style = style ?? ToastStyle()
+       config.isForce = isForce
        let toastView = ZXToastContentView(config: config)
        ToastManager.share.insert(toastView)
     }
-   public static func hideActivity(){
-       ToastManager.share.activity?.hideActivity()
+    public static func hideActivity(force:Bool = false){
+        ToastManager.share.activity?.hideActivity(force:force)
     }
+    
+    public static func hideToast(){
+        ToastManager.share.toasts.forEach({$0.removeFromSuperview()})
+        ToastManager.share.toasts = []
+     }
     
     private static func textShowTime(text: String) -> TimeInterval{
         if text.count <= 10{
