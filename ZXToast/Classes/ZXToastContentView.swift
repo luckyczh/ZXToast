@@ -72,6 +72,7 @@ public class ZXToastContentView: UIView {
         super.init(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width * 0.8, height: 0))
         autoresizingMask = [.flexibleLeftMargin, .flexibleRightMargin, .flexibleTopMargin, .flexibleBottomMargin]
         addSubview(titleLabel)
+        self.config = config
         titleLabel.text = config.text
         inset = config.style.contentInset
         customerView = config.customerView

@@ -55,7 +55,7 @@ public struct ZXToast{
            return
        }
        var config = ToasConfig(customerView: customerView, text: text, delay: delayHide, position: position)
-       config.style = style ?? ToastStyle()
+        config.style = style ?? ToastStyle.default
        config.isForce = isForce
        let toastView = ZXToastContentView(config: config)
        ToastManager.share.insert(toastView)

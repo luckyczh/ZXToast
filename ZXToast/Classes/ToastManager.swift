@@ -23,6 +23,8 @@ public struct ToastStyle {
     public var textColor: UIColor = .white
     public var textFont: UIFont = UIFont.systemFont(ofSize: 15)
     
+    public static var `default` = ToastStyle()
+    
     public init() {}
     
     public init(contentInset: UIEdgeInsets, backgroundColor: UIColor, cornerRadius: CGFloat, textColor: UIColor, textFont: UIFont) {
