@@ -7,90 +7,122 @@
 
 import Foundation
 
+public enum ToastType: Equatable {
+    case text
+    case iconText(icon: UIImage)
+    case loading
+    
+    var equalValue: Int {
+        switch self {
+        case .text:
+            0
+        case .iconText:
+            1
+        case .loading:
+            2
+        }
+    }
+    
+    public static func == (lhs: Self, rhs: Self) -> Bool {
+        lhs.equalValue == rhs.equalValue
+    }
+}
 
 public enum ToastPosition {
-     case top
-     case center
-     case bottom
- }
+    case top
+    case center
+    case bottom
+}
 
-public struct ToastStyle {
-    
-    
-    public var contentInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
-    public var backgroundColor: UIColor = .black
-    public var cornerRadius: CGFloat = 5
+public enum ToastAnimation {
+    case fade
+    case slide
+    case scale
+    case custom(show: (UIView, @escaping () -> Void) -> Void,
+                hide: (UIView, @escaping () -> Void) -> Void)
+}
+
+public struct ToastConfig {
+    public var type: ToastType = .text
+    public var position: ToastPosition = .center
+   
+    public var backgroundColor: UIColor = UIColor.black
     public var textColor: UIColor = .white
-    public var textFont: UIFont = UIFont.systemFont(ofSize: 15)
+    public var font: UIFont = .preferredFont(forTextStyle: .body)
+    public var cornerRadius: CGFloat = 12.0
+    public var padding: UIEdgeInsets = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
+    public var maxWidth: CGFloat = UIScreen.main.bounds.width - 40
+    public var imageSize: CGSize = CGSize(width: 30, height: 30)
+    /// 当position为 top 和 bottom时生效
+    public var verticalOffset: CGFloat = 40.0
     
-    public static var `default` = ToastStyle()
+    public var showAnimation: ToastAnimation = .scale
+    public var hideAnimation: ToastAnimation = .fade
     
-    public init() {}
+    public var blurEffect: UIBlurEffect.Style?
+    public var shadow: (color: UIColor, radius: CGFloat, opacity: Float) = (.black, 8, 0.2)
+    public var minDisplayDuration: TimeInterval = 1.0
+    public var maxDisplayDuration: TimeInterval = 5.0
+    public var charDurationRatio: TimeInterval = 0.06
     
-    public init(contentInset: UIEdgeInsets, backgroundColor: UIColor, cornerRadius: CGFloat, textColor: UIColor, textFont: UIFont) {
-        self.contentInset = contentInset
-        self.backgroundColor = backgroundColor
-        self.cornerRadius = cornerRadius
-        self.textColor = textColor
-        self.textFont = textFont
-    }
+    public var useQueue: Bool = true
 }
 
-struct ToasConfig {
-    var customerView : UIView?
-    var text = ""
-    var delay : TimeInterval = 0
-    var position = ToastPosition.center
-    var style = ToastStyle()
-    var isForce = false
-}
 
-public struct ToastManager{
-    
-    public static var share = ToastManager()
-    
-    /// loading是否显示关闭按钮
-    public var enbaleActivityClose = false
-    /// loading框关闭按钮出现延迟
-    public var activityTime :TimeInterval = 8
-    /// toast 出现动画时间
-    public var fadeTime : TimeInterval = 0.2
-    /// toast 最小宽高
-    public var toastMinWidth :CGFloat = 80
-    public var toastMinHeight :CGFloat = 80
-    /// 是否开启队列显示
-    public var enableQueue = false
-    
-    var toasts = [ZXToastContentView]()
-    var activity: ZXToastContentView?
-    
+public final class ToastManager {
+    public static let shared = ToastManager()
+    private var queue = [NEToast]()
     private init() {}
     
+    private var currentToast: NEToast?
+    private let lock = NSLock()
     
-    
-    
-    func insert(_ toast:ZXToastContentView){
-        guard !toast.isActivity else {
-            if ToastManager.share.activity != nil {
-                ToastManager.share.activity?.hideActivity()
-            }
-            ToastManager.share.activity = toast
-            toast.showActivity()
+    public func show(_ toast: NEToast) {
+        /// 当只显示文本时，文本为空不展示
+        if toast.config.type == .text && toast.message?.isEmpty != false {
             return
         }
-        if ToastManager.share.enableQueue {
-            ToastManager.share.toasts.append(toast)
-            if ToastManager.share.toasts.count <= 1{
-                toast.showText()
+        executeLocked {
+            if toast.config.useQueue {
+                queue.append(toast)
+                processNext()
+            }else {
+                showImmediately(toast)
             }
-        }else {
-            ToastManager.share.toasts.forEach({$0.removeFromSuperview()})
-            ToastManager.share.toasts = [toast]
-            toast.showText()
         }
-        
-        
     }
     
+    private func showImmediately(_ toast: NEToast) {
+        currentToast?.hide()
+        currentToast = toast
+        toast.show { [weak self] in
+            self?.currentToast = nil
+        }
+    }
     
+    private func processNext() {
+        guard currentToast == nil, let next = queue.first else { return }
+        queue.removeFirst()
+        currentToast = next
+        next.show { [weak self] in
+            self?.executeLocked {
+                self?.currentToast = nil
+                self?.processNext()
+            }
+        }
+    }
+    
+    public func hideAll() {
+        executeLocked {
+            queue.removeAll()
+            currentToast?.hide()
+            currentToast = nil
+        }
+    }
+    
+    private func executeLocked(_ block: () -> Void) {
+        lock.lock()
+        defer { lock.unlock() }
+        block()
+    }
 }

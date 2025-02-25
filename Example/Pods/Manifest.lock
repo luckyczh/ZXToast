@@ -1,5 +1,5 @@
 PODS:
-  - ZXToast (0.1.7)
+  - ZXToast (0.1.9)
 
 DEPENDENCIES:
   - ZXToast (from `../`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  ZXToast: e8047bd26349fc9c587a0ddb02a5e3dd2c1cf791
+  ZXToast: 68ea738a5a87e82b2f952b7969da6bdc5218eb8e
 
 PODFILE CHECKSUM: a7e856302b1194b399a2e584687436d126fdef94
 
-COCOAPODS: 1.15.2
+COCOAPODS: 1.16.2

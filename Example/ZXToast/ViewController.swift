@@ -85,6 +85,18 @@ class ViewController: UIViewController, CAAnimationDelegate {
         
     }
     
+   
+    
+    //// MARK: - 使用示例
+    //// 显示加载指示器
+   
+    //
+    //// 显示带进度的Toast
+    
+    //
+    //// 显示成功提示
+    
+    
     
   @objc  func startAnimation() {
 //        let group = CAAnimationGroup()
@@ -138,7 +150,7 @@ class ViewController: UIViewController, CAAnimationDelegate {
         // Dispose of any resources that can be recreated.
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        ZXToast.showError("这是错误")
+        
 
     }
 
@@ -157,61 +169,14 @@ extension ViewController:UITableViewDataSource,UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.row{
         case 0:
-            ZXToast.showText("提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1",position: .bottom)
+            NEToast.showLoading()
         case 1:
-            ZXToast.showText("提示2提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1提示1")
-            ZXToast.showText("提示3")
-            ZXToast.showText("提示4")
-            ZXToast.showText("提示5")
+            NEToast.showError("这是错误")
         case 2:
-            ZXToast.showSuccess("成功")
+            NEToast.showSuccess("这是成功")
         case 3:
-            DispatchQueue.global().async {
-                DispatchQueue.main.async {
-                    ZXToast.showError("失败7")
+            NEToast.showMessage("这是6朱可夫哈伦裤额哈看立法会快乐发货爱了黑发可怜合法快乐合法可怜合法快乐合法来看合法快乐和阿里开发哈立刻合法快乐发哈了客服哈伦裤和法兰克福啊立刻合法啊立刻哈")
 
-                }
-            }
-            DispatchQueue.global().async {
-                DispatchQueue.main.async {
-                    ZXToast.showError("失败6")
-
-                }
-            }
-            DispatchQueue.global().async {
-                DispatchQueue.main.async {
-                    ZXToast.showError("失败5")
-
-                }
-            }
-            DispatchQueue.global().async {
-                DispatchQueue.main.async {
-                    ZXToast.showError("失败4")
-
-                }
-            }
-            DispatchQueue.global().async {
-                DispatchQueue.main.async {
-                    ZXToast.showError("失败3")
-
-                }
-            }
-            DispatchQueue.global().async {
-                DispatchQueue.main.async {
-                    ZXToast.showError("失败2")
-
-                }
-            }
-            DispatchQueue.global().async {
-                DispatchQueue.main.async {
-                    ZXToast.showError("失败1")
-
-                }
-            }
-           
-            
-        case 4:
-            ZXToast.showActivity()
         default:
             break
         }
