@@ -15,7 +15,6 @@
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		7DA10D08F74D825E9A85F70A /* Pods_ZXToast_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1C087410006C263165125FA /* Pods_ZXToast_Example.framework */; };
 		D6B8E4AA2C3530D300F10F37 /* connect.svg in Resources */ = {isa = PBXBuildFile; fileRef = D6B8E4A92C3530D300F10F37 /* connect.svg */; };
-		D6DD19002D6C192C00EA96A9 /* NEToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DD18FF2D6C192C00EA96A9 /* NEToast.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +45,6 @@
 		A116E5207041429101FA3F0B /* ZXToast.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ZXToast.podspec; path = ../ZXToast.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		B1C087410006C263165125FA /* Pods_ZXToast_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZXToast_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6B8E4A92C3530D300F10F37 /* connect.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = connect.svg; sourceTree = "<group>"; };
-		D6DD18FF2D6C192C00EA96A9 /* NEToast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NEToast.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,7 +106,6 @@
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
-				D6DD18FF2D6C192C00EA96A9 /* NEToast.swift */,
 			);
 			name = "Example for ZXToast";
 			path = ZXToast;
@@ -308,7 +305,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
-				D6DD19002D6C192C00EA96A9 /* NEToast.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

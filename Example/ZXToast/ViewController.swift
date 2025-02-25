@@ -174,8 +174,7 @@ extension ViewController:UITableViewDataSource,UITableViewDelegate{
             NEToast.showError("这是错误")
         case 2:
             NEToast.showSuccess("这是成功")
-        case 3:
-            NEToast.showMessage("这是6朱可夫哈伦裤额哈看立法会快乐发货爱了黑发可怜合法快乐合法可怜合法快乐合法来看合法快乐和阿里开发哈立刻合法快乐发哈了客服哈伦裤和法兰克福啊立刻合法啊立刻哈")
+        case 3:            NEToast.showMessage("这是6朱可夫哈伦裤额哈看立法会快乐发货爱了黑发可怜合法快乐合法可怜合法快乐合法来看合法快乐和阿里开发哈立刻合法快乐发哈了客服哈伦裤和法兰克福啊立刻合法啊立刻哈")
 
         default:
             break
