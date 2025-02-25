@@ -99,6 +99,7 @@ private extension NEToast {
             addIcon(icon, to: stack)
             addLabel(to: stack)
         case .loading:
+            stack.spacing = 0
             addLoader(to: stack)
             if message?.isEmpty == false {
                 addLabel(to: stack)
@@ -140,8 +141,8 @@ private extension NEToast {
         loader.startAnimating()
         loader.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            loader.heightAnchor.constraint(equalToConstant: 80),
-            loader.widthAnchor.constraint(equalToConstant: 80)
+            loader.heightAnchor.constraint(equalToConstant: 75),
+            loader.widthAnchor.constraint(equalToConstant: message?.isEmpty == false ? 95 : 75)
         ])
         stack.addArrangedSubview(loader)
     }
