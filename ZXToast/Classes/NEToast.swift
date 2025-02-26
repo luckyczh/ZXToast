@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 
-public class NEToast: Equatable {
+open class NEToast: Equatable {
     let id = UUID()
     let message: String?
     public let config: ToastConfig
@@ -21,7 +21,7 @@ public class NEToast: Equatable {
     
     public init(message: String? = nil, config: ToastConfig?=nil) {
         self.message = message
-        self.config = config ?? ToastConfig()
+        self.config = config ?? .default
     }
     
     public static func == (lhs: NEToast, rhs: NEToast) -> Bool {
@@ -93,17 +93,15 @@ private extension NEToast {
         stack.alignment = .center
         stack.translatesAutoresizingMaskIntoConstraints = false
         switch config.type {
-        case .text:
-            addLabel(to: stack)
         case .iconText(let icon):
             addIcon(icon, to: stack)
-            addLabel(to: stack)
         case .loading:
             stack.spacing = 0
             addLoader(to: stack)
-            if message?.isEmpty == false {
-                addLabel(to: stack)
-            }
+        default: break
+        }
+        if message?.isEmpty == false {
+            addLabel(to: stack)
         }
         return stack
     }
@@ -262,16 +260,20 @@ public extension NEToast {
     }
     
     static func showSuccess(_ text: String?=nil) {
-        showImage(text, image: loadBundleImage("success"))
+        showImage(loadBundleImage("success"), text: text)
     }
     
     static func showError(_ text: String?=nil) {
-        showImage(text, image: loadBundleImage("fail"))
+        showImage(loadBundleImage("fail"), text: text)
     }
     
-    static func showImage(_ text: String?=nil, image: UIImage) {
+    static func showImage(_ image: UIImage, text: String?=nil) {
         let successToast = NEToast(message: text, config: ToastConfig(type: .iconText(icon: image)))
         ToastManager.shared.show(successToast)
+    }
+    
+    static func hideAll() {
+        ToastManager.shared.hideAll()
     }
     
    

@@ -169,7 +169,7 @@ extension ViewController:UITableViewDataSource,UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.row{
         case 0:
-            NEToast.showLoading()
+            NEToast.showLoading("加载中...")
         case 1:
             NEToast.showError("这是错误")
         case 2:

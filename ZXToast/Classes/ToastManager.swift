@@ -48,7 +48,7 @@ public struct ToastConfig {
    
     public var backgroundColor: UIColor = UIColor.black
     public var textColor: UIColor = .white
-    public var font: UIFont = .preferredFont(forTextStyle: .body)
+    public var font: UIFont = .systemFont(ofSize: 15)
     public var cornerRadius: CGFloat = 12.0
     public var padding: UIEdgeInsets = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
     public var maxWidth: CGFloat = UIScreen.main.bounds.width - 40
@@ -66,6 +66,8 @@ public struct ToastConfig {
     public var charDurationRatio: TimeInterval = 0.06
     
     public var useQueue: Bool = true
+    
+    public static var `default` = ToastConfig()
 }
 
 
